@@ -15,7 +15,7 @@ function GameDetails({
 
   return (
     <div
-      className={` p-2 flex justify-between border border-grey-100  bg-white ${inter.className}`}>
+      className={` p-2 flex justify-between border border-grey-75 bg-white ${inter.className}`}>
       <div className="flex">
         <Image
           className=""
@@ -37,9 +37,7 @@ function GameDetails({
           Summary
         </Link>
 
-        <Link
-          href="#"
-          className="px-4 border-l border-grey-100 hover:underline">
+        <Link href="#" className="px-4 border-l border-grey-75 hover:underline">
           Statistics
         </Link>
       </div>
