@@ -17,7 +17,7 @@ function ClubCard({
   return (
     <div
       className={`w-full py-2 bg-white ${inter.className} ${
-        showBorderBottom && 'border border-grey-100'
+        showBorderBottom && 'border-b border-grey-50'
       }`}>
       <div className={`flex w-full font-medium `}>
         <div className="py-1">

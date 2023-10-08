@@ -7,7 +7,7 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <Header />
-      <main className={`sm:container mx-auto ${inter.className}`}>
+      <main className={`sm:container bg-grey-50 mx-auto ${inter.className}`}>
         {children}
       </main>
     </>

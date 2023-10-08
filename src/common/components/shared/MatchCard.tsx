@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 function MatchCard() {
   return (
-    <div className={`p-2 bg-white ${inter.className}`}>
+    <div
+      className={`px-2 py-[10px] bg-white ${inter.className} border-b border-grey-50`}>
       <p className="text-xs uppercase font-semibold text-grey-100">4:00PM</p>
       <div className="flex justify-between">
         <div>
