@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { Inter } from 'next/font/google';
-import { Header } from '../shared';
+import { Footer, Header } from '../shared';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -13,6 +13,7 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
       <main className={`lg:container mx-auto ${inter.className}`}>
         {children}
       </main>
+      <Footer />
     </>
   );
 };
