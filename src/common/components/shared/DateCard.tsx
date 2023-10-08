@@ -3,12 +3,12 @@ import { DateCard } from 'src/types/DateCard';
 function DateCard({ active = false }: DateCard) {
   return (
     <div
-      className={` w-[80px] text-[12px] p-2 ${
-        active ? 'bg-[#F7EBEB]' : 'bg-game360-light-gray'
+      className={` w-[85px] text-xs p-2 ${
+        active ? ' bg-primary-light' : 'bg-grey-50'
       } 
       font-medium
       `}>
-      <p>Oct 5 - Thur</p>
+      <p>Oct 5 , Thur</p>
     </div>
   );
 }

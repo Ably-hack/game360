@@ -8,7 +8,7 @@ function MatchCardList() {
   return (
     <div className="px-4 py-6 bg-white">
       <div className="my-6">
-        <div className="flex" aria-label="header-section">
+        <div className="flex mb-4" aria-label="header-section">
           <div className="py-1">
             <Image
               className="mr-2"
@@ -18,7 +18,7 @@ function MatchCardList() {
               alt="UEFA logo"
             />
           </div>
-          <h2 className="text-game360-neutral-900 uppercase text-[18px] font-semibold">
+          <h2 className="text-neutral-600 uppercase text-lg font-semibold">
             UEFA Champions League
           </h2>
         </div>
@@ -26,7 +26,7 @@ function MatchCardList() {
           <DateCard />
         </div>
       </div>
-      <div className="text-game360-gray text-[12px] font-semibold uppercase">
+      <div className="text-grey-100 text-xs font-semibold uppercase">
         Thursday , October 5, 2023
       </div>
       <div>

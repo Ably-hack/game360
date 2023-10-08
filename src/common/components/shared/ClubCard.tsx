@@ -17,7 +17,7 @@ function ClubCard({
   return (
     <div
       className={`w-full py-2 bg-white ${inter.className} ${
-        showBorderBottom && 'border border-game360-gray'
+        showBorderBottom && 'border border-grey-100'
       }`}>
       <div className={`flex w-full font-medium `}>
         <div className="py-1">
@@ -30,10 +30,10 @@ function ClubCard({
           />
         </div>
         <div>
-          <h3 className=" text-game360-neutral-900 text-[18px]">Chelsea</h3>
+          <h3 className=" text-neutral-600 text-lg">Chelsea</h3>
         </div>
       </div>
-      <div className="py-1 text-sm text-game360-gray">
+      <div className="py-1 text-sm text-grey-100">
         <Link href="#" className=" pr-3  hover:underline">
           Squad
         </Link>
