@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
 import { Inter } from 'next/font/google';
+import { ReactNode } from 'react';
 import { Footer, Header } from '../shared';
 
 const inter = Inter({
@@ -10,7 +10,7 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <Header />
-      <main className={`lg:container mx-auto ${inter.className}`}>
+      <main className={`sm:container bg-grey-50 mt-1 mx-auto ${inter.className}`}>
         {children}
       </main>
       <Footer />

@@ -1,40 +1,98 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SportsConnect-MVP
 
-## Getting Started
+## Welcome to the SportsConnect MVP repository
 
-First, run the development server:
+<p align="center" width="100%">
+  <img src="https://github.com/Ably-hack/game360/assets/58889001/2fd4fd66-d2cc-4fdf-af06-c79512ef0d93" alt="site"/>
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+> ## Table of contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Overview](#overview)
+- [Core Features Implemented](#core-features-implemented)
+- [Technologies](#technologies)
+- [Repo Setup](#repo-setup)
+- [Requirements](#requirements)
+- [Live Link](#live-link)
+- [Contributors](#contributors)
+- [Contributing to the project](#contributing-to-the-project)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+#
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+> ## Overview
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<p align="justify">
+"SportsConnect" is a comprehensive real-time sports engagement platform designed to enhance the fan experience and connect sports enthusiasts with their favorite teams and athletes. This innovative application caters to the passionate world of sports, offering fans an immersive and interactive way to follow, engage, and participate in live sports events.
+</p>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#
 
-## Learn More
+> ## Core Features Implemented
 
-To learn more about Next.js, take a look at the following resources:
+- Live Sports Feed?: SportsConnect provides a real-time feed of live sports events, including scores, play-by-play updates, and statistics. Users can select their favorite teams and players to customize their feed.
+- Real-Time Fan Interactions: During games, fans can engage with each other through live chat, voice commentary, and fan challenges, fostering a sense of camaraderie and competition.
+- Customized Notifications: Users receive real-time notifications for game highlights, scores, and player milestones, ensuring they never miss a moment.
+- Predictive Gaming: SportsConnect includes a real-time prediction game where fans can make predictions about the outcome of in-game events (e.g., next goal, player stats)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+> ## Technologies
+>
+> | <b><u>Stack</u></b>  | <b><u>Usage</u></b> |
+> | :------------------- | :------------------ |
+> | **`Ably sdks/Apis`** | backend             |
+> | **`Next JS`**        | Frontend            |
 
-## Deploy on Vercel
+#
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> ## Repo Setup
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p align="justify">
+To setup the repo, first fork the Nft-assets Repo, then clone the forked repository to create a copy on the local machine.
+</p>
+
+    $ git clone https://github.com/Ably-hack/game360.git
+
+<p align="justify">
+Change directory to the cloned repo and set the original game360 repository as the "upstream" and your forked repository as the "origin" using gitbash.
+</p>
+
+    $ git remote add upstream  https://github.com/Ably-hack/game360.git
+
+#
+
+## Useful links
+
+## View attribution files here
+
+## Explainer video (User POV)
+
+- [Frontend Deployment]()
+- [Figma design](https://www.figma.com/file/QWAqeSwpH4Je4gGjXYPBnL/SportsConnect?node-id=115%3A2&mode=dev)
+
+> ## Contributors
+
+This Project was created by these awesome dedicated members
+
+<p align="center" width="100%">
+  <img src="" alt="teamSports"/>
+</p>
+
+#
+
+> ## Contributing to the project
+
+If you find something worth contributing, please fork the repo, make a pull request and add valid and well-reasoned explanations about your changes or comments.
+
+Before adding a pull request, please note:
+
+- This is an open source project.
+- Your contributions should be inviting and clear.
+- Any additions should be relevant.
+- New features should be easy to contribute to.
+
+All **`suggestions`** are welcome!
+
+#
+
+> ##### README Created by `Enebeli Emmanuel` for SportsConnect
