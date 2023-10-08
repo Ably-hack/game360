@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
         primary: '#DD0000',
         'primary-light': '#F7EBEB',
         neutral: {
@@ -70,6 +71,17 @@ const config: Config = {
 
         '3xl': '2560px',
         // => @media (min-width: 2560px) { ... }
+=======
+        'game360-gray': '#888888',
+        'game360-light-gray': '#F7F7F7',
+        'game360-red': '#DD0000',
+        'game360-neutral-900': '#1A1B1C',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+>>>>>>> d66b0b3ed6da263d22fec13b3eefc308e37777b3
       },
     },
   },
