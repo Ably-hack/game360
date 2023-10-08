@@ -22,8 +22,12 @@ function MatchCardList() {
             UEFA Champions League
           </h2>
         </div>
-        <div className="flex">
+        <div className="flex overflow-x-auto">
           <DateCard active={true} />
+          <DateCard />
+          <DateCard />
+          <DateCard />
+          <DateCard />
           <DateCard />
           <DateCard />
         </div>
