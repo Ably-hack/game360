@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -27,9 +26,4 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -ms-font-smoothing: antialiased;
-=======
-
-body {
-    background-color: #F7F7F7;
->>>>>>> d66b0b3ed6da263d22fec13b3eefc308e37777b3
 }
