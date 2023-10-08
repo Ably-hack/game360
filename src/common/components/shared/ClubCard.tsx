@@ -22,7 +22,7 @@ function ClubCard({
       <div className={`flex w-full font-medium `}>
         <div className="py-1">
           <Image
-            className=""
+            className="mr-1"
             src={imageLink}
             height={20}
             width={20}

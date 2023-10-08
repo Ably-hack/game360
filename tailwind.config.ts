@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       colors: {
         'game360-gray': '#888888',
+        'game360-light-gray': '#F7F7F7',
         'game360-red': '#DD0000',
         'game360-neutral-900': '#1A1B1C',
       },
