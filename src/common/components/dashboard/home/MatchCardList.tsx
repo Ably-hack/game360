@@ -22,11 +22,13 @@ function MatchCardList() {
             UEFA Champions League
           </h2>
         </div>
-        <div>
+        <div className="flex">
+          <DateCard active={true} />
+          <DateCard />
           <DateCard />
         </div>
       </div>
-      <div className="text-grey-100 text-xs font-semibold uppercase">
+      <div className="text-grey-100 mt-6 text-xs font-semibold uppercase">
         Thursday , October 5, 2023
       </div>
       <div>
