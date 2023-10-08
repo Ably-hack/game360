@@ -24,10 +24,10 @@ function GameDetails({
           alt={'location'}
         />
         <div className="text-sm">
-          <p className=" my-2 text-center text-neutral-900 font-medium">
+          <p className=" my-1 sm:my-0 text-center text-game360-neutral-900 font-medium">
             {stadium}
           </p>
-          {isMobile && <p className=" text-gray-400">{location}</p>}
+          {isMobile && <p className=" text-game360-gray">{location}</p>}
         </div>
       </div>
 
