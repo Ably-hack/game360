@@ -17,7 +17,7 @@ function ClubCard({
   return (
     <div
       className={`w-full py-2 bg-white ${inter.className} ${
-        showBorderBottom && 'border border-[#EDEDED]'
+        showBorderBottom && 'border border-game360-gray'
       }`}>
       <div className={`flex w-full font-medium `}>
         <div className="py-1">
@@ -30,19 +30,19 @@ function ClubCard({
           />
         </div>
         <div>
-          <h3 className=" text-neutral-900 text-[18px]">Chelsea</h3>
+          <h3 className=" text-game360-neutral-900 text-[18px]">Chelsea</h3>
         </div>
       </div>
-      <div className="py-1 text-sm">
-        <Link href="#" className=" pr-3 text-game360-gray hover:underline">
+      <div className="py-1 text-sm text-game360-gray">
+        <Link href="#" className=" pr-3  hover:underline">
           Squad
         </Link>
         {isMobile && (
-          <Link href="#" className="pr-3 text-gray-400 hover:underline">
+          <Link href="#" className="pr-3  hover:underline">
             Stats
           </Link>
         )}
-        <Link href="#" className="pr-3 text-gray-400 hover:underline">
+        <Link href="#" className="pr-3  hover:underline">
           Fixtures
         </Link>
       </div>
