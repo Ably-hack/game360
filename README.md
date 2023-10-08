@@ -95,5 +95,5 @@ Before adding a pull request, please note:
 
 All **`suggestions`** are welcome!
 #
-> ##### README Created by `Enebeli Emmanuel` for Zeus Labs
+> ##### README Created by `Enebeli Emmanuel` for SportsConnect
 
