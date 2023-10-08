@@ -1,10 +1,10 @@
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
+import { DEFAULT_IMAGE } from 'src/common/constants';
 import useMediaQuery from 'src/common/hooks/useMediaQuery';
 import { ClubCard } from 'src/types/ClubCard';
 
-const DEFAULT_IMAGE = '/images/UEFA_Champions_League_1.png';
 const inter = Inter({ subsets: ['latin'] });
 
 function ClubCard({
@@ -12,7 +12,7 @@ function ClubCard({
   clubTitle,
   showBorderBottom = false,
 }: ClubCard) {
-  const isMobile = useMediaQuery('(min-width: 430px)');
+  const isTablet = useMediaQuery('(min-width: 430px)');
 
   return (
     <div
@@ -37,7 +37,7 @@ function ClubCard({
         <Link href="#" className=" pr-3  hover:underline">
           Squad
         </Link>
-        {isMobile && (
+        {isTablet && (
           <Link href="#" className="pr-3  hover:underline">
             Stats
           </Link>
