@@ -23,9 +23,9 @@ const AuthLayout: FC<AuthProps> = ({
       className="bg-auth bg-no-repeat sm:bg-repeat-y bg-cover 
     min-h-[100vh] h-full overflow-y-auto">
       <div className="md:p-10 w-full flex md:justify-end">
-        <div className=" w-[80%] lg:w-[40%] mx-auto lg:mx-0 ">
+        <div className=" w-[80%] lg:w-[40%] mx-auto lg:mx-0 py-10">
           <div
-            className={`p-10 w-full bg-grey-200 mt-12 lg:mt-8 rounded-lg ${manrope.className}`}>
+            className={`p-10 w-full bg-grey-200 mt-8 lg:mt-0 rounded-lg ${manrope.className}`}>
             <div className=" w-fit">
               <Link passHref={true} href="/">
                 <Image
