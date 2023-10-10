@@ -1,14 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { INewsCard } from 'src/types/News'
 
-interface INewsCard {
-    title: string
-    description?: string
-    image?: string
-    url: string
-    time: string
-}
+
 const NewsCard: React.FC<INewsCard> = ({title, description, image, url, time}) => {
   return (
     <Link href={url} className='border-neutral-100 border-b-2 py-3 gap-3 news__container-card  cursor-pointer'>
