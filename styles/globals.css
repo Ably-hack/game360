@@ -24,3 +24,20 @@ body {
   --tw-bg-opacity: 1;
   background-color: rgb(247 247 247 / var(--tw-bg-opacity));
 }
+
+
+.news__container-card{
+    container-type: inline-size;
+}
+
+@container(max-width: 280px) {
+  .news__container-card_title{
+    font-size: 0.7rem !important;
+  }
+}
+
+@container(max-width: 200px) {
+  .news__container-card_header{
+    flex-direction: column !important;
+  }
+}

@@ -1,3 +1,4 @@
+import { FootballNews } from 'src/common/components/dashboard/home';
 import MatchCardList from 'src/common/components/dashboard/home/MatchCardList';
 import TeamsList from 'src/common/components/dashboard/home/TeamsList';
 import DashboardLayout from 'src/common/components/layout/DashboardLayout';
@@ -11,13 +12,18 @@ export default function Home() {
       <div className="text-neutral-400">
         <div className="flex">
           {isDesktop && (
-            <div className=" md:w-[30%] lg:w-[25%]">
+            <div className=" md:w-[30%] lg:w-[25%] m-1">
               <TeamsList />
             </div>
           )}
           <div className="w-[100%] md:w-[50%] m-1">
             <MatchCardList />
           </div>
+          {isDesktop && (
+            <div className=" md:w-[30%] lg:w-[25%] m-1">
+              <FootballNews />
+            </div>
+          )}
         </div>
       </div>
     </DashboardLayout>
