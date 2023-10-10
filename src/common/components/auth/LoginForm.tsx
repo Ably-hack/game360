@@ -1,40 +1,11 @@
 import { TextInput } from 'flowbite-react';
-import { Manrope } from 'next/font/google';
 import Link from 'next/link';
 import { HiOutlineEye } from 'react-icons/hi';
 import { Image } from '../shared';
 
-const manrope = Manrope({ subsets: ['latin'] });
-
 function LoginForm() {
   return (
-    <div className={`p-10 w-full bg-grey-200 rounded-lg ${manrope.className}`}>
-      <div className=" w-fit">
-        <Link passHref={true} href="/">
-          <Image
-            alt="Game360 Logo"
-            className="cursor-pointer"
-            src={'/svgs/logo_Mark.svg'}
-            width={88}
-            height={32}
-          />
-        </Link>
-      </div>
-
-      <div className="mt-10 flex justify-between">
-        <h3
-          className="text-[20px] font-extrabold leading-5
-         tracking-[-0.4px] text-neutral-900">
-          Account Login
-        </h3>
-        <Link
-          href="#"
-          passHref
-          className="text-sm leading-5 font-normal hover:underline">
-          Don’t have an account?
-        </Link>
-      </div>
-
+    <>
       <div className="py-4">
         <form>
           <div className="py-1">
@@ -95,18 +66,7 @@ function LoginForm() {
           Continue with Google
         </button>
       </div>
-
-      <div className="mt-10 text-xs leading-5 text-grey-100">
-        <p>
-          This site is protected by reCAPTCHA and the Google Privacy Policy and
-          Terms of Service apply
-        </p>
-        <p className="mt-6">
-          You also agree to receive product-related marketing emails from
-          SportConnect, which you can unsubscribe from at any time.
-        </p>
-      </div>
-    </div>
+    </>
   );
 }
 

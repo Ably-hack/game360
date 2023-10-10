@@ -1,16 +1,15 @@
 import LoginForm from 'src/common/components/auth/LoginForm';
+import AuthLayout from 'src/common/components/layout/AuthLayout';
 
 function login() {
   return (
-    <div
-      className="bg-auth bg-no-repeat sm:bg-repeat-y bg-cover 
-    md:min-h-[100vh]">
-      <div className=" md:p-10 w-full flex md:justify-end">
-        <div className=" w-[80%] lg:w-[40%] mx-auto lg:mx-0 ">
-          <LoginForm />
-        </div>
-      </div>
-    </div>
+    <AuthLayout
+      title="Account Login"
+      linkText="Don't have an account"
+      to="#"
+      showInfo>
+      <LoginForm />
+    </AuthLayout>
   );
 }
 

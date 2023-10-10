@@ -8,7 +8,6 @@ type ComponentProps = {
   width: number;
   height: number;
   blurDataURL?: string;
-  objectFit?: string;
   className?: string;
 };
 
@@ -22,7 +21,6 @@ const Image = forwardRef(
       height,
       blurDataURL,
       className,
-      objectFit = 'cover',
     }: ComponentProps ) => {
     blurDataURL = src
       ? blurDataURL ||
@@ -35,7 +33,6 @@ const Image = forwardRef(
     return (
       <NextImage
         className={className}
-        objectFit={objectFit}
         priority={priority || false}
         alt={alt || ''}
         src={src}

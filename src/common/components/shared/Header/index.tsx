@@ -296,8 +296,12 @@ const Header = () => {
                       rounded
                     />
                   }>
-                  <Dropdown.Item>Sign up</Dropdown.Item>
-                  <Dropdown.Item>Log in</Dropdown.Item>
+                  <Dropdown.Item onClick={() => push('/signup')}>
+                    Sign up
+                  </Dropdown.Item>
+                  <Dropdown.Item onClick={() => push('/login')}>
+                    Log in
+                  </Dropdown.Item>
                 </Dropdown>
               </div>
             </div>
@@ -497,16 +501,16 @@ const Header = () => {
                 <Button
                   className="px-10"
                   color="failure"
-                  // onClick={() => push("/#")}
+                  onClick={() => push("/signup")}
                 >
-                  <Link href="">Sign up</Link>
+                  <Link href="/signup">Sign up</Link>
                 </Button>
                 <Button
                   color="failure"
                   outline
-                  // onClick={() => push("/#")}
+                  onClick={() => push("/login")}
                 >
-                  <Link href="" className="text-primary">
+                  <Link href="/login" className="text-primary">
                     Log in
                   </Link>
                 </Button>

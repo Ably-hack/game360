@@ -10,7 +10,7 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <Header />
-      <main className={`sm:container bg-grey-50 mt-1 mx-auto ${inter.className}`}>
+      <main className={`xl:container px-4 bg-grey-50 mt-1 mx-auto ${inter.className}`}>
         {children}
       </main>
       <Footer />

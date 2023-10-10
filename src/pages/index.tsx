@@ -10,17 +10,17 @@ export default function Home() {
   return (
     <DashboardLayout>
       <div className="text-neutral-400">
-        <div className="flex">
+        <div className="grid grid-cols-12">
           {isDesktop && (
-            <div className=" md:w-[30%] lg:w-[25%] m-1">
+            <div className="col-span-full md:col-span-4 lg:col-span-3  m-1">
               <TeamsList />
             </div>
           )}
-          <div className="w-[100%] md:w-[50%] m-1">
+          <div className="col-span-full md:col-span-8 lg:col-span-6 m-1">
             <MatchCardList />
           </div>
           {isDesktop && (
-            <div className=" md:w-[30%] lg:w-[25%] m-1">
+            <div className="col-span-full lg:col-span-3  m-1">
               <FootballNews />
             </div>
           )}
