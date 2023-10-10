@@ -16,11 +16,13 @@ const config: Config = {
           400: '#9A9EA2',
           500: '#797979',
           600: '#1A1B1C',
+          900: '#171717',
         },
         grey: {
           50: '#F7F7F7',
           75: '#EDEDED',
           100: '#8C8C8C',
+          200: '#E5E5E5',
         },
       },
       fontSize: {
@@ -71,6 +73,9 @@ const config: Config = {
 
         '3xl': '2560px',
         // => @media (min-width: 2560px) { ... }
+      },
+      backgroundImage: {
+        auth: "url('/images/Authentication.png')",
       },
     },
   },
