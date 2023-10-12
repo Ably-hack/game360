@@ -75,7 +75,7 @@ const config: Config = {
         // => @media (min-width: 2560px) { ... }
       },
       backgroundImage: {
-        auth: "url('/images/Authentication.png')",
+        auth: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('/images/Authentication.png')",
       },
     },
   },
