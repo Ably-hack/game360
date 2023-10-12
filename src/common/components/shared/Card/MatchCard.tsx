@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google';
+import GameDetails from '../GameDetails';
 import ClubCard from './ClubCard';
-import GameDetails from './GameDetails';
 
 const inter = Inter({ subsets: ['latin'] });
 
