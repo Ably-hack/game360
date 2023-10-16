@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -25,19 +40,18 @@ body {
   background-color: rgb(247 247 247 / var(--tw-bg-opacity));
 }
 
-
-.news__container-card{
-    container-type: inline-size;
+.news__container-card {
+  container-type: inline-size;
 }
 
-@container(max-width: 280px) {
-  .news__container-card_title{
+@container (max-width: 280px) {
+  .news__container-card_title {
     font-size: 0.7rem !important;
   }
 }
 
-@container(max-width: 200px) {
-  .news__container-card_header{
+@container (max-width: 200px) {
+  .news__container-card_header {
     flex-direction: column !important;
   }
 }
