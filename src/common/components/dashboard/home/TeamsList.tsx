@@ -28,7 +28,7 @@ function TeamsList() {
         <DropDown data={FOOTBALL_TEAMS} />
       </div>
       <div>
-        {DUMMY_DATA.map((item, id) => {
+        {DUMMY_DATA.map((_item, id) => {
           return (
             <div key={id} className="px-6 py-2">
               <ClubCard showBorderBottom={true} />
