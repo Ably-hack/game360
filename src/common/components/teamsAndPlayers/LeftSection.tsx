@@ -13,7 +13,7 @@ function LeftSection() {
 
   return (
     <div className="bg-white ">
-      <div className=" mx-auto sm:mx-0 w-full max-w-md px-3 py-6">
+      <div className=" mx-auto sm:mx-auto w-full max-w-md px-3 py-6">
         <Tab.Group>
           <Tab.List className="flex space-x-1 rounded-3xl bg-grey-75 p-1">
             {TeamAndPlayersTabs.map((tab, index) => (
@@ -34,7 +34,7 @@ function LeftSection() {
           </Tab.List>
           <Tab.Panels className="mt-2">
             <div className="mt-4">
-              <DropDown data={FOOTBALL_TEAMS} />
+              <DropDown data={FOOTBALL_TEAMS} textColor="text-neutral-900" />
             </div>
             {contents.map((content, idx) => (
               <Tab.Panel

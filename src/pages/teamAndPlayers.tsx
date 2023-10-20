@@ -12,11 +12,14 @@ function TeamAndPlayers() {
             location="London, England · Stanford Bridge"
             averageAge={24}
             totalPlayers={32}
+            foreignPlayers={17}
           />
         </div>
-        <div className="mt-1">
-          <LeftSection />
-        </div>
+        <main className="px-10">
+          <div className="mt-1 md:w-[35%]">
+            <LeftSection />
+          </div>
+        </main>
       </div>
     </TeamsAndPlayersLayout>
   );
