@@ -3,6 +3,7 @@ import MatchCardList from 'src/common/components/dashboard/home/MatchCardList';
 import TeamsList from 'src/common/components/dashboard/home/TeamsList';
 import DashboardLayout from 'src/common/components/layout/DashboardLayout';
 import TeamsTab from 'src/common/components/shared/Tabs/TeamsTab';
+import ViewTransfers from 'src/common/components/transfer/ViewTransfers';
 import { COMPETITION } from 'src/common/constants';
 import useMediaQuery from 'src/common/hooks/useMediaQuery';
 
@@ -35,6 +36,7 @@ export default function Home() {
           )}
         </div>
       </div>
+      <ViewTransfers />
     </DashboardLayout>
   );
 }

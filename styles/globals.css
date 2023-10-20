@@ -55,3 +55,16 @@ body {
     flex-direction: column !important;
   }
 }
+
+.view__transfer-player_table {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.view__transfer-players_contaner {
+  container-type: viewTransferPlayers / inline-size;
+}
+@container viewTransferPlayers (max-width: 768px) {
+  .view__transfer-player_table {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
