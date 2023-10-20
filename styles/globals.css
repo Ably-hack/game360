@@ -41,21 +41,32 @@ body {
 }
 
 .news__container-card {
-  container-type: inline-size;
+  container: newsCard / inline-size;
 }
 
-@container (max-width: 280px) {
+@container newsCard (max-width: 280px) {
   .news__container-card_title {
     font-size: 0.7rem !important;
   }
 }
 
-@container (max-width: 200px) {
+@container newsCard (max-width: 200px) {
   .news__container-card_header {
     flex-direction: column !important;
   }
 }
 
+.view__transfer-players_contaner {
+  container: viewTransferPlayers / inline-size;
+}
+.view__transfer-player_table {
+  grid-template-columns: repeat(2, 1fr);
+}
+@container viewTransferPlayers (max-width: 768px) {
+  .view__transfer-player_table {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 @layer components {
   .flex-justify-between {
     @apply flex items-center justify-between;
