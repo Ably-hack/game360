@@ -4,9 +4,9 @@ import {
   DUMMY_DATA,
   FOOTBALL_TEAMS,
 } from 'src/common/constants';
-import DateCard from '../../shared/Card/DateCard';
-import MatchCard from '../../shared/Card/MatchCard';
-import DropDown from '../../ui/DropDown';
+import DateCard from '../../../shared/Card/DateCard';
+import MatchCard from '../../../shared/Card/MatchCard';
+import DropDown from '../../../ui/DropDown';
 
 function MatchCardList() {
   return (

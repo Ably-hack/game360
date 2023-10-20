@@ -1,6 +1,6 @@
 import { Tab } from '@headlessui/react';
 import { FOOTBALL_TEAMS, TeamAndPlayersTabs } from 'src/common/constants';
-import DropDown from '../ui/DropDown';
+import DropDown from '../../../ui/DropDown';
 import FixtureList from './FixtureList';
 import ResultList from './ResultList';
 
