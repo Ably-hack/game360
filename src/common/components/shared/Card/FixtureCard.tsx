@@ -12,13 +12,14 @@ function FixtureCard({
   showBorderBottom = false,
   league_title,
   matchDate,
+  matchTime,
 }: FixtureCard) {
   //   const isTablet = useMediaQuery('(min-width: 430px)');
 
   return (
     <div
-      className={`w-full py-2 px-2 bg-white ${inter.className} ${
-        showBorderBottom && 'border-b border-grey-50'
+      className={`w-full py-4 px-3 bg-white ${inter.className} ${
+        showBorderBottom && 'border-b-2 border-grey-50'
       }`}>
       <div className="flex justify-between">
         <div className={`flex font-medium `}>
@@ -36,7 +37,8 @@ function FixtureCard({
           </div>
         </div>
         <div>
-          <p className="text-sm font-medium">{matchDate}</p>
+          <p className="text-sm text-center font-medium">{matchDate}</p>
+          <p className="text-sm text-center font-medium">{matchTime}</p>
         </div>
         <div className={`flex font-medium `}>
           <div className="py-1">
@@ -54,7 +56,7 @@ function FixtureCard({
         </div>
       </div>
 
-      <div className="py-1 text-sm text-center text-grey-100">
+      <div className="py-1 mt-4 text-sm text-center text-grey-100">
         <p>{league_title}</p>
       </div>
     </div>

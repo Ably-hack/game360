@@ -1,7 +1,13 @@
-import React from 'react';
+import LeftSection from 'src/common/components/teamsAndPlayers/LeftSection';
 
 function TeamAndPlayers() {
-  return <div>teamAndPlayers</div>;
+  return (
+    <div>
+      <div>
+        <LeftSection />
+      </div>
+    </div>
+  );
 }
 
 export default TeamAndPlayers;
