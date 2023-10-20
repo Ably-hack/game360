@@ -1,6 +1,6 @@
-export const DEFAULT_IMAGE = '/images/UEFA_Champions_League_1.png';
+const DEFAULT_IMAGE = '/images/UEFA_Champions_League_1.png';
 
-export const FOOTBALL_TEAMS = [
+const FOOTBALL_TEAMS = [
   'UEFA Champions League',
   'Spanish LALIGA',
   'Africa Cup of Nations',
@@ -9,11 +9,11 @@ export const FOOTBALL_TEAMS = [
   'Nigerian Professional League',
 ];
 
-export const DUMMY_DATA = Array.from({ length: 7 }, () =>
+const DUMMY_DATA = Array.from({ length: 7 }, () =>
   Math.floor(Math.random() * 6)
 );
 
-export const COMPETITION = [
+const COMPETITION = [
   {
     title: 'UEFA Champions League',
     slug: 'UCL',
@@ -46,4 +46,25 @@ export const COMPETITION = [
   },
 ];
 
-export const TeamAndPlayersTabs = ['Fixtures', 'Results'];
+const TeamAndPlayersTabs = ['Fixtures', 'Results'];
+
+const PERFORMANCE_DATA = [
+  'Longest Winning',
+  'Longest Current Winning',
+  'Longest Unbeaten',
+  'Longest Current Unbeaten',
+  'Longest Losing',
+  'Longest Current Losing',
+  'Longest Winless',
+  'Longest Current Winless',
+];
+
+
+export {
+  DEFAULT_IMAGE,
+  FOOTBALL_TEAMS,
+  DUMMY_DATA,
+  COMPETITION,
+  TeamAndPlayersTabs,
+  PERFORMANCE_DATA,
+};

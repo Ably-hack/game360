@@ -55,3 +55,18 @@ body {
     flex-direction: column !important;
   }
 }
+
+@layer components {
+  .flex-justify-between {
+    @apply flex items-center justify-between;
+  }
+  .table-head {
+    @apply font-medium text-sm leading-[16.94px] text-center;
+  }
+  .table-data {
+    @apply font-normal text-sm;
+  }
+  .row-border {
+    @apply border-b border-neutral-100 py-1.5;
+  }
+}
