@@ -1,6 +1,5 @@
-
 import React from 'react';
-import FixturesCard from './FixturesCard';
+import FixturesCard from '../../../shared/Card/FixturesCard';
 
 const TodayMatches = () => {
   return (
