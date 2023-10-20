@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   DEFAULT_IMAGE,
   DUMMY_DATA,
   FOOTBALL_TEAMS,
 } from 'src/common/constants';
-import ClubCard from '../../shared/Card/ClubCard';
-import DropDown from '../../ui/DropDown';
+import ClubCard from '../../../shared/Card/ClubCard';
+import DropDown from '../../../ui/DropDown';
 
 function TeamsList() {
   return (
@@ -30,9 +31,11 @@ function TeamsList() {
       <div>
         {DUMMY_DATA.map((_item, id) => {
           return (
-            <div key={id} className="px-6 py-2">
-              <ClubCard showBorderBottom={true} />
-            </div>
+            <Link href={`/team`} passHref key={id}>
+              <div className="px-6 py-2">
+                <ClubCard showBorderBottom={true} />
+              </div>
+            </Link>
           );
         })}
       </div>

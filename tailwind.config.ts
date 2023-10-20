@@ -13,6 +13,8 @@ const config: Config = {
         primary: '#DD0000',
         'primary-light': '#F7EBEB',
         neutral: {
+          50: '#FAFAFA',
+          100: '#F5F5F5',
           400: '#9A9EA2',
           500: '#797979',
           600: '#1A1B1C',
@@ -23,6 +25,7 @@ const config: Config = {
           75: '#EDEDED',
           100: '#8C8C8C',
           200: '#E5E5E5',
+          250: '#525252',
         },
       },
       fontSize: {

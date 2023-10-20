@@ -62,8 +62,22 @@ body {
 .view__transfer-player_table {
   grid-template-columns: repeat(2, 1fr);
 }
-@container (max-width: 768px) {
+@container viewTransferPlayers (max-width: 768px) {
   .view__transfer-player_table {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+@layer components {
+  .flex-justify-between {
+    @apply flex items-center justify-between;
+  }
+  .table-head {
+    @apply font-medium text-sm leading-[16.94px] text-center;
+  }
+  .table-data {
+    @apply font-normal text-sm;
+  }
+  .row-border {
+    @apply border-b border-neutral-100 py-1.5;
   }
 }

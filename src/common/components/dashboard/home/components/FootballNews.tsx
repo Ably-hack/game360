@@ -1,5 +1,5 @@
 import React from 'react';
-import NewsCard from '../../shared/Card/NewsCard';
+import NewsCard from '../../../shared/Card/NewsCard';
 
 const FootballNews = () => {
   return (
