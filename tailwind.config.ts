@@ -23,6 +23,7 @@ const config: Config = {
           75: '#EDEDED',
           100: '#8C8C8C',
           200: '#E5E5E5',
+          250: '#525252',
         },
       },
       fontSize: {

@@ -45,3 +45,5 @@ export const COMPETITION = [
     teams: ['Athletico', 'Barcelona', 'Villareal'],
   },
 ];
+
+export const TeamAndPlayersTabs = ['Fixtures', 'Results'];

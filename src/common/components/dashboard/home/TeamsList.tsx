@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   DEFAULT_IMAGE,
   DUMMY_DATA,
@@ -30,9 +31,11 @@ function TeamsList() {
       <div>
         {DUMMY_DATA.map((_item, id) => {
           return (
-            <div key={id} className="px-6 py-2">
-              <ClubCard showBorderBottom={true} />
-            </div>
+            <Link href={`/teamAndPlayers`} passHref key={id}>
+              <div className="px-6 py-2">
+                <ClubCard showBorderBottom={true} />
+              </div>
+            </Link>
           );
         })}
       </div>
