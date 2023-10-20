@@ -31,7 +31,7 @@ function TeamsList() {
       <div>
         {DUMMY_DATA.map((_item, id) => {
           return (
-            <Link href={`/teamAndPlayers`} passHref key={id}>
+            <Link href={`/team`} passHref key={id}>
               <div className="px-6 py-2">
                 <ClubCard showBorderBottom={true} />
               </div>

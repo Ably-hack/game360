@@ -8,7 +8,7 @@ function ResultList() {
       <p className="border-b-2 border-grey-50"></p>
       {DUMMY_DATA.map((_item, id) => {
         return (
-          <Link href={`/teamAndPlayers`} passHref key={id}>
+          <Link href={`/team`} passHref key={id}>
             <ResultCard
               teamOne="Chelsea"
               teamTwo="Arsenal"

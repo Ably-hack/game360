@@ -1,4 +1,3 @@
-import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import Chart from 'react-google-charts';
 import { CustomButton } from '../ui/Buttons/CustomButton';
@@ -10,8 +9,6 @@ type HeaderSection = {
   totalPlayers: number;
   foreignPlayers: number;
 };
-
-const inter = Inter({ subsets: ['latin'] });
 
 function HeaderSection({
   teamTitle,
@@ -42,7 +39,7 @@ function HeaderSection({
 
   return (
     <div
-      className={` px-10 py-6 bg-white flex  flex-col sm:flex-row justify-between ${inter.className}`}>
+      className={`px-6 py-6 flex bg-white flex-col sm:flex-row justify-between`}>
       {/* left section */}
       <div className="flex">
         <div className="mr-6">
