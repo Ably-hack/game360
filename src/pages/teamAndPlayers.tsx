@@ -15,7 +15,7 @@ function TeamAndPlayers() {
             foreignPlayers={17}
           />
         </div>
-        <main className="px-10">
+        <main className="md:px-10">
           <div className="mt-1 md:w-[35%]">
             <LeftSection />
           </div>
