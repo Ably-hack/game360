@@ -62,7 +62,7 @@ body {
 .view__transfer-player_table {
   grid-template-columns: repeat(2, 1fr);
 }
-@container viewTransferPlayers (max-width: 768px) {
+@container viewTransferPlayers (max-width: 668px) {
   .view__transfer-player_table {
     grid-template-columns: repeat(1, 1fr);
   }
