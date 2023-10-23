@@ -1,3 +1,4 @@
+import ViewTransfers from '../../transfer/ViewTransfers';
 import LeftSection from './components/LeftSection';
 import TeamPerformance from './components/TeamPerformance';
 
@@ -11,6 +12,7 @@ const Team = () => {
         {/* Middle section  */}
         <div className="grid gap-1">
           <TeamPerformance />
+          <ViewTransfers />
         </div>
       </div>
       <div className="col-span-full lg:col-span-3 mt-1">
