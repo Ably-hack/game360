@@ -1,6 +1,6 @@
-import ViewTransfers from '../../transfer/ViewTransfers';
 import LeftSection from './components/LeftSection';
 import TeamPerformance from './components/TeamPerformance';
+import ViewTransfers from './components/transfer/ViewTransfers';
 
 const Team = () => {
   return (
