@@ -47,6 +47,10 @@ const COMPETITION = [
 ];
 
 const TeamAndPlayersTabs = ['Fixtures', 'Results'];
+const FORMATION_TABS = [
+  { title: '4-3-3', teamIcon: '/images/chelsea.png' },
+  { title: '4-2-3-1', teamIcon: '/images/arsenal.png' },
+];
 
 const PERFORMANCE_DATA = [
   'Longest Winning',
@@ -59,12 +63,13 @@ const PERFORMANCE_DATA = [
   'Longest Current Winless',
 ];
 
-
 export {
-  DEFAULT_IMAGE,
-  FOOTBALL_TEAMS,
-  DUMMY_DATA,
   COMPETITION,
-  TeamAndPlayersTabs,
+  DEFAULT_IMAGE,
+  DUMMY_DATA,
+  FOOTBALL_TEAMS,
+  FORMATION_TABS,
   PERFORMANCE_DATA,
+  TeamAndPlayersTabs,
 };
+
