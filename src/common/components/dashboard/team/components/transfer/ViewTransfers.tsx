@@ -41,133 +41,135 @@ const transferData = [
 ];
 const ViewTransfers = () => {
   return (
-    <div className="bg-white px-4 pt-[1.5rem] view__transfer-players_contaner">
-      <h3 className="font-semibold text-neutral-900">TRANSFER</h3>
-      <div className="my-2 grid grid-cols-2 gap-4">
-        <div>
-          <select
-            className=" w-full py-2 px-4 text-grey-100 bg-grey-50 rounded-none 
+    <div className="bg-white py-6 px-5 view__transfer-players_contaner">
+      <div className="grid gap-4">
+        <h3 className="font-semibold text-neutral-900">TRANSFER</h3>
+        <div className=" grid grid-cols-2 gap-4">
+          <div>
+            <select
+              className=" w-full py-2 px-4 text-grey-100 bg-grey-50 rounded-none 
         focus:ring-0 focus:outline-none ring-grey-50 border-0
         font-medium text-sm
         ">
-            <option>UEFA Champions League</option>
-            <option>Spanish LALIGA</option>
-            <option>Africa Cup of Nations</option>
-            <option>English Premier League</option>
-            <option>CAF Champions League</option>
-            <option>Nigerian Professional League</option>
-          </select>
-        </div>
-        <div>
-          <select
-            className=" w-full py-2 px-4 text-grey-100 bg-grey-50 rounded-none 
+              <option>UEFA Champions League</option>
+              <option>Spanish LALIGA</option>
+              <option>Africa Cup of Nations</option>
+              <option>English Premier League</option>
+              <option>CAF Champions League</option>
+              <option>Nigerian Professional League</option>
+            </select>
+          </div>
+          <div>
+            <select
+              className=" w-full py-2 px-4 text-grey-100 bg-grey-50 rounded-none 
         focus:ring-0 focus:outline-none ring-grey-50 border-0
         font-medium text-sm
         ">
-            <option>2020-2021</option>
-            <option>2021-2022</option>
-            <option>2022-2023</option>
-            <option>2023-2024</option>
-          </select>
-        </div>
-      </div>
-      <div className="grid gap-4 view__transfer-player_table  ">
-        <div>
-          <div className="relative overflow-x-auto ">
-            <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-              <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                  <th scope="col" className="px-4 py-3">
-                    Date
-                  </th>
-                  <th scope="col" className="px-1 py-3">
-                    Palyer
-                  </th>
-                  <th scope="col" className="px-1 py-3">
-                    From
-                  </th>
-                  <th scope="col" className="px-1 py-3">
-                    Fee
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {transferData.map((item, index) => (
-                  <tr
-                    key={index}
-                    className={`${
-                      index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
-                    }  border-b dark:bg-gray-900 dark:border-gray-700`}>
-                    <td className="px-4 py-2">{item.data}</td>
-                    <td className="px-1 py-2">{item.player}</td>
-                    <td className="px-1 py-2">
-                      <div className="flex items-center gap-1">
-                        <div className="max-w-[1.13rem]">
-                          <Image
-                            src={`${item.from.clubLogo}`}
-                            className="w-full"
-                            alt={item.from.clubName}
-                            width={20}
-                            height={20}
-                          />
-                        </div>
-                        <p>{item.from.clubName}</p>
-                      </div>
-                    </td>
-                    <td className="px-1 py-2">{item.fee}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+              <option>2020-2021</option>
+              <option>2021-2022</option>
+              <option>2022-2023</option>
+              <option>2023-2024</option>
+            </select>
           </div>
         </div>
-        <div>
-          <div className="relative overflow-x-auto ">
-            <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-              <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                  <th scope="col" className="px-4 py-3">
-                    Date
-                  </th>
-                  <th scope="col" className="px-1 py-3">
-                    Palyer
-                  </th>
-                  <th scope="col" className="px-1 py-3">
-                    From
-                  </th>
-                  <th scope="col" className="px-1 py-3">
-                    Fee
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {transferData.map((item, index) => (
-                  <tr
-                    key={index}
-                    className={`${
-                      index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
-                    }  border-b dark:bg-gray-900 dark:border-gray-700`}>
-                    <td className="px-4 py-2">{item.data}</td>
-                    <td className="px-1 py-2">{item.player}</td>
-                    <td className="px-1 py-2">
-                      <div className="flex items-center gap-1">
-                        <div className="max-w-[1.13rem]">
-                          <Image
-                            src={`${item.from.clubLogo}`}
-                            className="w-full"
-                            alt={item.from.clubName}
-                            width={20}
-                            height={20}
-                          />
-                        </div>
-                        <p>{item.from.clubName}</p>
-                      </div>
-                    </td>
-                    <td className="px-1 py-2">{item.fee}</td>
+        <div className="grid gap-4 view__transfer-player_table  ">
+          <div>
+            <div className="relative overflow-x-auto ">
+              <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                  <tr>
+                    <th scope="col" className="px-4 py-3">
+                      Date
+                    </th>
+                    <th scope="col" className="px-1 py-3">
+                      Palyer
+                    </th>
+                    <th scope="col" className="px-1 py-3">
+                      From
+                    </th>
+                    <th scope="col" className="px-1 py-3">
+                      Fee
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {transferData.map((item, index) => (
+                    <tr
+                      key={index}
+                      className={`${
+                        index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
+                      }  border-b dark:bg-gray-900 dark:border-gray-700`}>
+                      <td className="px-4 py-2">{item.data}</td>
+                      <td className="px-1 py-2">{item.player}</td>
+                      <td className="px-1 py-2">
+                        <div className="flex items-center gap-1">
+                          <div className="max-w-[1.13rem]">
+                            <Image
+                              src={`${item.from.clubLogo}`}
+                              className="w-full"
+                              alt={item.from.clubName}
+                              width={20}
+                              height={20}
+                            />
+                          </div>
+                          <p>{item.from.clubName}</p>
+                        </div>
+                      </td>
+                      <td className="px-1 py-2">{item.fee}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <div className="relative overflow-x-auto ">
+              <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                  <tr>
+                    <th scope="col" className="px-4 py-3">
+                      Date
+                    </th>
+                    <th scope="col" className="px-1 py-3">
+                      Palyer
+                    </th>
+                    <th scope="col" className="px-1 py-3">
+                      From
+                    </th>
+                    <th scope="col" className="px-1 py-3">
+                      Fee
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {transferData.map((item, index) => (
+                    <tr
+                      key={index}
+                      className={`${
+                        index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
+                      }  border-b dark:bg-gray-900 dark:border-gray-700`}>
+                      <td className="px-4 py-2">{item.data}</td>
+                      <td className="px-1 py-2">{item.player}</td>
+                      <td className="px-1 py-2">
+                        <div className="flex items-center gap-1">
+                          <div className="max-w-[1.13rem]">
+                            <Image
+                              src={`${item.from.clubLogo}`}
+                              className="w-full"
+                              alt={item.from.clubName}
+                              width={20}
+                              height={20}
+                            />
+                          </div>
+                          <p>{item.from.clubName}</p>
+                        </div>
+                      </td>
+                      <td className="px-1 py-2">{item.fee}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

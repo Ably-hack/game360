@@ -1,4 +1,5 @@
 import LeftSection from './components/LeftSection';
+import TeamLeagueTable from './components/TeamLeagueTable';
 import TeamPerformance from './components/TeamPerformance';
 import TeamSquad from './components/TeamSquad';
 import ViewTransfers from './components/transfer/ViewTransfers';
@@ -14,6 +15,7 @@ const Team = () => {
         <div className="grid gap-1">
           <TeamPerformance />
           <ViewTransfers />
+          <TeamLeagueTable />
         </div>
       </div>
       <div className="col-span-full lg:col-span-3 mt-1">

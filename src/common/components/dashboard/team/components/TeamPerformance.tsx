@@ -1,5 +1,5 @@
 import { FOOTBALL_TEAMS, PERFORMANCE_DATA } from 'src/common/constants';
-import DropDown from '../../../ui/DropDown';
+import SelectDropDown from '../../../ui/DropDown';
 import { applyEvenRowColor } from 'src/common/utils';
 
 const TeamPerformance = () => {
@@ -11,8 +11,8 @@ const TeamPerformance = () => {
             Team Performance
           </h2>
           <div className="grid grid-cols-2 gap-3">
-            <DropDown data={FOOTBALL_TEAMS} />
-            <DropDown data={['2023-2024']} />
+            <SelectDropDown data={FOOTBALL_TEAMS} />
+            <SelectDropDown data={['2023-2024']} />
           </div>
           <div className="table-responsive pt-2">
             <div className="flex-justify-between row-border">

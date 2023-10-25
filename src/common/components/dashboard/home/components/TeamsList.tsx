@@ -6,7 +6,7 @@ import {
   FOOTBALL_TEAMS,
 } from 'src/common/constants';
 import ClubCard from '../../../shared/Card/ClubCard';
-import DropDown from '../../../ui/DropDown';
+import SelectDropDown from '../../../ui/DropDown';
 
 function TeamsList() {
   return (
@@ -26,7 +26,7 @@ function TeamsList() {
         </h2>
       </div>
       <div>
-        <DropDown data={FOOTBALL_TEAMS} />
+        <SelectDropDown data={FOOTBALL_TEAMS} />
       </div>
       <div>
         {DUMMY_DATA.map((_item, id) => {

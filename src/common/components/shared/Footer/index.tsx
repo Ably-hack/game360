@@ -10,7 +10,7 @@ const Footer = () => {
     { href: '/privacy', item: 'Privacy' },
   ];
   return (
-    <div className="2xl:px-8 px-4 pb-5 pt-7 border-t bg-white">
+    <div className="2xl:px-8 px-4 pb-5 mt-8 pt-7 border-t bg-white">
       <div className="">
         <div className="flex space-y-4 lg:space-y-0 flex-col lg:flex-row lg:items-center justify-between">
           <Link scroll={true} href="/">

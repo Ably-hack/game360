@@ -6,7 +6,7 @@ import {
 } from 'src/common/constants';
 import DateCard from '../../../shared/Card/DateCard';
 import MatchCard from '../../../shared/Card/MatchCard';
-import DropDown from '../../../ui/DropDown';
+import SelectDropDown from '../../../ui/DropDown';
 
 function MatchCardList() {
   return (
@@ -28,7 +28,7 @@ function MatchCardList() {
             </h2>
           </div>
           <div className=" mx-auto md:mx-0 w-[100%] md:max-w-[200px]">
-            <DropDown data={FOOTBALL_TEAMS} />
+            <SelectDropDown data={FOOTBALL_TEAMS} />
           </div>
         </div>
 

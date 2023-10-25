@@ -1,7 +1,7 @@
 'use client';
 import { DropDown } from 'src/types/DropDown';
 
-export default function DropDown({
+export default function SelectDropDown({
   data,
   textColor = 'text-grey-100',
 }: DropDown) {

@@ -1,6 +1,6 @@
 import { Tab } from '@headlessui/react';
 import { FOOTBALL_TEAMS, TeamAndPlayersTabs } from 'src/common/constants';
-import DropDown from '../../../ui/DropDown';
+import SelectDropDown from '../../../ui/DropDown';
 import FixtureList from './FixtureList';
 import ResultList from './ResultList';
 
@@ -34,7 +34,10 @@ function LeftSection() {
           </Tab.List>
           <Tab.Panels className="mt-2">
             <div className="mt-4">
-              <DropDown data={FOOTBALL_TEAMS} textColor="text-neutral-900" />
+              <SelectDropDown
+                data={FOOTBALL_TEAMS}
+                textColor="text-neutral-900"
+              />
             </div>
             {contents.map((content, idx) => (
               <Tab.Panel
