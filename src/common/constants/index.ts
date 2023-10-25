@@ -59,6 +59,53 @@ const PERFORMANCE_DATA = [
   'Longest Current Winless',
 ];
 
+const TEAM_SQUAD = [
+  {
+    image: '/images/degea-image.png',
+    name: ' De Gea',
+    age: '30',
+    position: 'G',
+    height: '1.92',
+    weight: '82',
+    nat: 'Spain',
+  },
+  {
+    image: '/images/degea-image.png',
+    name: ' De Gea',
+    age: '30',
+    position: 'G',
+    height: '1.92',
+    weight: '82',
+    nat: 'Spain',
+  },
+  {
+    image: '/images/degea-image.png',
+    name: ' De Gea',
+    age: '30',
+    position: 'G',
+    height: '1.92',
+    weight: '82',
+    nat: 'Spain',
+  },
+  {
+    image: '/images/degea-image.png',
+    name: ' De Gea',
+    age: '30',
+    position: 'G',
+    height: '1.92',
+    weight: '82',
+    nat: 'Spain',
+  },
+  {
+    image: '/images/degea-image.png',
+    name: ' De Gea',
+    age: '30',
+    position: 'G',
+    height: '1.92',
+    weight: '82',
+    nat: 'Spain',
+  },
+];
 
 export {
   DEFAULT_IMAGE,
@@ -67,4 +114,5 @@ export {
   COMPETITION,
   TeamAndPlayersTabs,
   PERFORMANCE_DATA,
+  TEAM_SQUAD,
 };
