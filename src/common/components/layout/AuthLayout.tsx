@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { Image } from '../shared';
 import { Manrope } from 'next/font/google';
+import Link from 'next/link';
 import { FC, ReactNode } from 'react';
+import { Image } from '../shared';
 
 const manrope = Manrope({ subsets: ['latin'] });
 type AuthProps = {
@@ -31,7 +31,7 @@ const AuthLayout: FC<AuthProps> = ({
                 <Image
                   alt="Game360 Logo"
                   className="cursor-pointer"
-                  src={'/svgs/logo_Mark.svg'}
+                  src={'/svgs/logo.svg'}
                   width={88}
                   height={32}
                 />
