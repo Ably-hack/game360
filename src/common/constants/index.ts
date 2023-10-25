@@ -47,6 +47,10 @@ const COMPETITION = [
 ];
 
 const TeamAndPlayersTabs = ['Fixtures', 'Results'];
+const FORMATION_TABS = [
+  { title: '4-3-3', teamIcon: '/images/chelsea.png' },
+  { title: '4-2-3-1', teamIcon: '/images/arsenal.png' },
+];
 
 const PERFORMANCE_DATA = [
   'Longest Winning',
@@ -58,6 +62,61 @@ const PERFORMANCE_DATA = [
   'Longest Winless',
   'Longest Current Winless',
 ];
+
+
+const CHELSEA_PlAYERS = [
+  {
+    playerName: 'David Raya',
+    playerNumber: '23',
+  },
+  {
+    playerName: 'William Saliba',
+    playerNumber: '62',
+  },
+  {
+    playerName: 'Oleksandr Zinchenko',
+    playerNumber: '11',
+  },
+  {
+    playerName: 'Takehiro Tomiyasu',
+    playerNumber: '19',
+  },
+  {
+    playerName: 'Emiliano Martínez',
+    playerNumber: '25',
+  },
+  {
+    playerName: 'Ben White',
+    playerNumber: '80',
+  },
+];
+
+const ARSENAL_PlAYERS = [
+  {
+    playerName: 'Ederson',
+    playerNumber: '1',
+  },
+  {
+    playerName: 'Dias Walker',
+    playerNumber: '3',
+  },
+  {
+    playerName: 'Silva Lewis',
+    playerNumber: '4',
+  },
+  {
+    playerName: 'Foden Haaland',
+    playerNumber: '15',
+  },
+  {
+    playerName: 'Emiliano Martinez',
+    playerNumber: '63',
+  },
+  {
+    playerName: 'Ruben Dias',
+    playerNumber: '20',
+  },
+  };
 
 const TEAM_SQUAD = [
   {
@@ -104,15 +163,22 @@ const TEAM_SQUAD = [
     height: '1.92',
     weight: '82',
     nat: 'Spain',
+
   },
 ];
 
 export {
-  DEFAULT_IMAGE,
-  FOOTBALL_TEAMS,
-  DUMMY_DATA,
+  ARSENAL_PlAYERS,
+  CHELSEA_PlAYERS,
   COMPETITION,
-  TeamAndPlayersTabs,
+  DEFAULT_IMAGE,
+  DUMMY_DATA,
+  FOOTBALL_TEAMS,
+  FORMATION_TABS,
   PERFORMANCE_DATA,
-  TEAM_SQUAD,
+   match-result
+  TeamAndPlayersTabs,
+    TEAM_SQUAD,
 };
+
+
