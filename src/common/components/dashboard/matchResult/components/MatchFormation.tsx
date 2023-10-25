@@ -1,15 +1,18 @@
 import Accordion from 'src/common/components/shared/Accordion';
 import PlayerMatchDetails from 'src/common/components/shared/PlayerMatchDetails';
-import { DUMMY_DATA } from 'src/common/constants';
 
-function MatchFormation() {
+type MatchFormation = {
+  data: { playerName: string; playerNumber: string }[];
+};
+
+function MatchFormation({ data }: MatchFormation) {
   return (
     <div>
-      {DUMMY_DATA.map((item, index) => (
+      {data.map((item, index) => (
         <div key={index}>
           <Accordion
-            playerName="David Raya"
-            playerNumber="23"
+            playerName={item.playerName}
+            playerNumber={item.playerNumber}
             numberOfFollowers="2k">
             <PlayerMatchDetails name="Emiliano" />
           </Accordion>

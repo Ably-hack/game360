@@ -6,7 +6,7 @@ type PlayerMatchDetails = {
 
 function PlayerMatchDetails({ name }: PlayerMatchDetails) {
   return (
-    <div>
+    <div className="py-2">
       <div className="p-2 flex w-full justify-between bg-primary-light">
         <div className="max-w-[180px]">Received notification about {name}</div>
         <div>

@@ -15,10 +15,8 @@ type Accordion = {
 
 function Accordion({
   headingStyles,
-  contentStyle,
   playerName,
   playerNumber,
-  content,
   playerImage,
   numberOfFollowers,
   children,
@@ -74,16 +72,14 @@ function Accordion({
           </div>
         </div>
 
-        <p className={` text-2xl h-fit ${open && 'rotate-180'}`}> &#94; </p>
+        <p className={` text-xl h-fit ${open && 'rotate-180'}`}> &#94; </p>
       </div>
-      {open && (
-        <div>
-          <p className={` py-4 px-3 bg-wakanda-dark ${contentStyle}`}>
-            {content}
-          </p>
-          {children}
-        </div>
-      )}
+      <div
+        className={`overflow-hidden transition-[max-height] duration-500 ease-in ${
+          open ? 'max-h-100' : 'max-h-0'
+        }`}>
+        {open && <div>{children}</div>}
+      </div>
     </div>
   );
 }

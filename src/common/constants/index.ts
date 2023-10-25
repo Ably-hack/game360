@@ -63,7 +63,63 @@ const PERFORMANCE_DATA = [
   'Longest Current Winless',
 ];
 
+const CHELSEA_PlAYERS = [
+  {
+    playerName: 'David Raya',
+    playerNumber: '23',
+  },
+  {
+    playerName: 'William Saliba',
+    playerNumber: '62',
+  },
+  {
+    playerName: 'Oleksandr Zinchenko',
+    playerNumber: '11',
+  },
+  {
+    playerName: 'Takehiro Tomiyasu',
+    playerNumber: '19',
+  },
+  {
+    playerName: 'Emiliano Martínez',
+    playerNumber: '25',
+  },
+  {
+    playerName: 'Ben White',
+    playerNumber: '80',
+  },
+];
+
+const ARSENAL_PlAYERS = [
+  {
+    playerName: 'Ederson',
+    playerNumber: '1',
+  },
+  {
+    playerName: 'Dias Walker',
+    playerNumber: '3',
+  },
+  {
+    playerName: 'Silva Lewis',
+    playerNumber: '4',
+  },
+  {
+    playerName: 'Foden Haaland',
+    playerNumber: '15',
+  },
+  {
+    playerName: 'Emiliano Martinez',
+    playerNumber: '63',
+  },
+  {
+    playerName: 'Ruben Dias',
+    playerNumber: '20',
+  },
+];
+
 export {
+  ARSENAL_PlAYERS,
+  CHELSEA_PlAYERS,
   COMPETITION,
   DEFAULT_IMAGE,
   DUMMY_DATA,
