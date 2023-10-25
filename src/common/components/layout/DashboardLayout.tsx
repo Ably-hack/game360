@@ -20,7 +20,7 @@ const DashboardLayout = ({
       <TodayMatches />
       {beforeMain}
       <main
-        className={`xl:container px-4 bg-grey-50  mx-auto ${inter.className}`}>
+        className={`xl:px-8 px-4 bg-grey-50  mx-auto ${inter.className}`}>
         {children}
       </main>
       <Footer />

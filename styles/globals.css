@@ -80,4 +80,7 @@ body {
   .row-border {
     @apply border-b border-neutral-100 py-1.5;
   }
+  .section-title {
+    @apply uppercase font-bold text-neutral-900 mx-4;
+  }
 }

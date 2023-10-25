@@ -4,4 +4,3 @@ interface DropDown {
 }
 
 export type { DropDown };
-
