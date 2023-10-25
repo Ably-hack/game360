@@ -72,7 +72,7 @@ const ViewTransfers = () => {
             </select>
           </div>
         </div>
-        <div className="grid gap-4 view__transfer-player_table  ">
+        <div className="grid gap-4 2xl:grid-cols-2  ">
           <div>
             <div className="relative overflow-x-auto ">
               <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">

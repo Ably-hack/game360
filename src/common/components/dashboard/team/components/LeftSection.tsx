@@ -13,7 +13,7 @@ function LeftSection() {
 
   return (
     <div className="bg-white ">
-      <div className=" mx-auto sm:mx-auto w-full max-w-md px-3 py-6">
+      <div className=" mx-auto sm:mx-auto w-full max-w- px-3 py-6">
         <Tab.Group>
           <Tab.List className="flex space-x-1 rounded-3xl bg-grey-75 p-1">
             {TeamAndPlayersTabs.map((tab, index) => (
