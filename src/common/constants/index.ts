@@ -63,6 +63,7 @@ const PERFORMANCE_DATA = [
   'Longest Current Winless',
 ];
 
+
 const CHELSEA_PlAYERS = [
   {
     playerName: 'David Raya',
@@ -115,6 +116,55 @@ const ARSENAL_PlAYERS = [
     playerName: 'Ruben Dias',
     playerNumber: '20',
   },
+  };
+
+const TEAM_SQUAD = [
+  {
+    image: '/images/degea-image.png',
+    name: ' De Gea',
+    age: '30',
+    position: 'G',
+    height: '1.92',
+    weight: '82',
+    nat: 'Spain',
+  },
+  {
+    image: '/images/degea-image.png',
+    name: ' De Gea',
+    age: '30',
+    position: 'G',
+    height: '1.92',
+    weight: '82',
+    nat: 'Spain',
+  },
+  {
+    image: '/images/degea-image.png',
+    name: ' De Gea',
+    age: '30',
+    position: 'G',
+    height: '1.92',
+    weight: '82',
+    nat: 'Spain',
+  },
+  {
+    image: '/images/degea-image.png',
+    name: ' De Gea',
+    age: '30',
+    position: 'G',
+    height: '1.92',
+    weight: '82',
+    nat: 'Spain',
+  },
+  {
+    image: '/images/degea-image.png',
+    name: ' De Gea',
+    age: '30',
+    position: 'G',
+    height: '1.92',
+    weight: '82',
+    nat: 'Spain',
+
+  },
 ];
 
 export {
@@ -126,6 +176,9 @@ export {
   FOOTBALL_TEAMS,
   FORMATION_TABS,
   PERFORMANCE_DATA,
+   match-result
   TeamAndPlayersTabs,
+    TEAM_SQUAD,
 };
+
 

@@ -73,20 +73,20 @@ const ViewTransfers = () => {
       </div>
       <div className="grid gap-4 view__transfer-player_table  ">
         <div>
-          <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <div className="relative overflow-x-auto ">
             <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
               <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
-                  <th scope="col" className="px-6 py-3">
+                  <th scope="col" className="px-4 py-3">
                     Date
                   </th>
-                  <th scope="col" className="px-2 py-3">
+                  <th scope="col" className="px-1 py-3">
                     Palyer
                   </th>
-                  <th scope="col" className="px-2 py-3">
+                  <th scope="col" className="px-1 py-3">
                     From
                   </th>
-                  <th scope="col" className="px-2 py-3">
+                  <th scope="col" className="px-1 py-3">
                     Fee
                   </th>
                 </tr>
@@ -98,9 +98,9 @@ const ViewTransfers = () => {
                     className={`${
                       index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
                     }  border-b dark:bg-gray-900 dark:border-gray-700`}>
-                    <td className="px-6 py-4">{item.data}</td>
-                    <td className="px-2 py-4">{item.player}</td>
-                    <td className="px-2 py-4">
+                    <td className="px-4 py-2">{item.data}</td>
+                    <td className="px-1 py-2">{item.player}</td>
+                    <td className="px-1 py-2">
                       <div className="flex items-center gap-1">
                         <div className="max-w-[1.13rem]">
                           <Image
@@ -114,7 +114,7 @@ const ViewTransfers = () => {
                         <p>{item.from.clubName}</p>
                       </div>
                     </td>
-                    <td className="px-2 py-4">{item.fee}</td>
+                    <td className="px-1 py-2">{item.fee}</td>
                   </tr>
                 ))}
               </tbody>
@@ -122,20 +122,20 @@ const ViewTransfers = () => {
           </div>
         </div>
         <div>
-          <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <div className="relative overflow-x-auto ">
             <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
               <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
-                  <th scope="col" className="px-6 py-3">
+                  <th scope="col" className="px-4 py-3">
                     Date
                   </th>
-                  <th scope="col" className="px-2 py-3">
+                  <th scope="col" className="px-1 py-3">
                     Palyer
                   </th>
-                  <th scope="col" className="px-2 py-3">
+                  <th scope="col" className="px-1 py-3">
                     From
                   </th>
-                  <th scope="col" className="px-2 py-3">
+                  <th scope="col" className="px-1 py-3">
                     Fee
                   </th>
                 </tr>
@@ -147,9 +147,9 @@ const ViewTransfers = () => {
                     className={`${
                       index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
                     }  border-b dark:bg-gray-900 dark:border-gray-700`}>
-                    <td className="px-6 py-4">{item.data}</td>
-                    <td className="px-2 py-4">{item.player}</td>
-                    <td className="px-2 py-4">
+                    <td className="px-4 py-2">{item.data}</td>
+                    <td className="px-1 py-2">{item.player}</td>
+                    <td className="px-1 py-2">
                       <div className="flex items-center gap-1">
                         <div className="max-w-[1.13rem]">
                           <Image
@@ -163,7 +163,7 @@ const ViewTransfers = () => {
                         <p>{item.from.clubName}</p>
                       </div>
                     </td>
-                    <td className="px-2 py-4">{item.fee}</td>
+                    <td className="px-1 py-2">{item.fee}</td>
                   </tr>
                 ))}
               </tbody>

@@ -1,5 +1,6 @@
 import LeftSection from './components/LeftSection';
 import TeamPerformance from './components/TeamPerformance';
+import TeamSquad from './components/TeamSquad';
 import ViewTransfers from './components/transfer/ViewTransfers';
 
 const Team = () => {
@@ -17,7 +18,7 @@ const Team = () => {
       </div>
       <div className="col-span-full lg:col-span-3 mt-1">
         {/* Right section */}
-        Hello
+        <TeamSquad />
       </div>
     </div>
   );
