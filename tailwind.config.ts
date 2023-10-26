@@ -36,7 +36,7 @@ const config: Config = {
         lg: '1.125rem', // 18px
         xl: '1.5rem', // 24px
         xxl: '4rem', // will be updated if need be
-        extra: '1.25rem', // will be updated if need be
+        extra: '2.8125rem', // 48px
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],

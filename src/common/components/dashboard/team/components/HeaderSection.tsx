@@ -53,7 +53,7 @@ function HeaderSection({
         </div>
         <div className=" my-auto">
           <div>
-            <h2 className=" text-xl sm:text-[48px] font-medium">{teamTitle}</h2>
+            <h2 className=" text-xl sm:text-extra font-medium">{teamTitle}</h2>
             <div className="flex text-sm text-grey-100">
               <Image
                 className=""
