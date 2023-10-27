@@ -63,7 +63,6 @@ const PERFORMANCE_DATA = [
   'Longest Current Winless',
 ];
 
-
 const CHELSEA_PlAYERS = [
   {
     playerName: 'David Raya',
@@ -116,7 +115,7 @@ const ARSENAL_PlAYERS = [
     playerName: 'Ruben Dias',
     playerNumber: '20',
   },
-]
+];
 
 const TEAM_SQUAD = [
   {
@@ -163,7 +162,20 @@ const TEAM_SQUAD = [
     height: '1.92',
     weight: '82',
     nat: 'Spain',
-
+  },
+];
+const PREDICTION_DATA = [
+  {
+    id: 1,
+    name: 'chelsea',
+    logo: '/images/chelsea.png',
+    color: '#144992',
+  },
+  {
+    id: 3,
+    name: 'arsenal',
+    logo: '/images/arsenal.png',
+    color: '#D00',
   },
 ];
 
@@ -177,7 +189,6 @@ export {
   FORMATION_TABS,
   PERFORMANCE_DATA,
   TeamAndPlayersTabs,
-    TEAM_SQUAD,
+  TEAM_SQUAD,
+  PREDICTION_DATA,
 };
-
-
