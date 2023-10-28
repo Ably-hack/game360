@@ -1,12 +1,12 @@
 import MatchFixture from 'src/common/components/dashboard/fixture/MatchFixture';
-import MatchHeaderSection from 'src/common/components/dashboard/fixture/components/FixtureHeaderSection';
+import FixtureHeaderSection from 'src/common/components/dashboard/fixture/components/FixtureHeaderSection';
 import DashboardLayout from 'src/common/components/layout/DashboardLayout';
 
 function Fixture() {
   return (
     <DashboardLayout
       beforeMain={
-        <MatchHeaderSection
+        <FixtureHeaderSection
           teamOne="Chelsea"
           teamTwo="Arsenal"
           location="London, England · Stanford Bridge"
