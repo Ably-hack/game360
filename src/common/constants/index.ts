@@ -179,6 +179,71 @@ const PREDICTION_DATA = [
   },
 ];
 
+const HEAD_TO_HEAD_RECORD_DATA = {
+  title: '  HEAD TO HEAD record',
+  data: [
+    {
+      id: 1,
+      secondTeamName: 'Chelsea',
+      secondTeamLogo: '/images/chelsea.png',
+      firstTeamName: 'Arsenal',
+      firstTeamLogo: '/images/arsenal.png',
+      secondTeamScore: 0,
+      firstTeamScore: 2,
+
+      league: 'UEFA Champions League',
+      date: '3 Oct, 23',
+    },
+    {
+      id: 2,
+      firstTeamName: 'Chelsea',
+      firstTeamLogo: '/images/chelsea.png',
+      secondTeamName: 'Arsenal',
+      secondTeamLogo: '/images/arsenal.png',
+      firstTeamScore: 2,
+      secondTeamScore: 2,
+
+      league: 'UEFA Champions League',
+      date: '3 Oct, 23',
+    },
+    {
+      id: 6,
+      secondTeamName: 'Chelsea',
+      secondTeamLogo: '/images/chelsea.png',
+      firstTeamName: 'Arsenal',
+      firstTeamLogo: '/images/arsenal.png',
+      secondTeamScore: 0,
+      firstTeamScore: 2,
+
+      league: 'UEFA Champions League',
+      date: '3 Oct, 23',
+    },
+    {
+      id: 9,
+      secondTeamName: 'Chelsea',
+      secondTeamLogo: '/images/chelsea.png',
+      firstTeamName: 'Arsenal',
+      firstTeamLogo: '/images/arsenal.png',
+      secondTeamScore: 0,
+      firstTeamScore: 2,
+
+      league: 'UEFA Champions League',
+      date: '3 Oct, 23',
+    },
+    {
+      id: 3,
+      firstTeamName: 'Chelsea',
+      firstTeamLogo: '/images/chelsea.png',
+      secondTeamName: 'Arsenal',
+      secondTeamLogo: '/images/arsenal.png',
+      firstTeamScore: 0,
+      secondTeamScore: 2,
+
+      league: 'UEFA Champions League',
+      date: '3 Oct, 23',
+    },
+  ],
+};
 export {
   ARSENAL_PlAYERS,
   CHELSEA_PlAYERS,
@@ -191,4 +256,5 @@ export {
   TeamAndPlayersTabs,
   TEAM_SQUAD,
   PREDICTION_DATA,
+  HEAD_TO_HEAD_RECORD_DATA,
 };
