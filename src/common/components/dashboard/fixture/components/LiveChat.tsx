@@ -8,7 +8,7 @@ on Monday for medical assessments despite Arsenal boss
 Mikel Arteta insisting Saka was unavailable.`;
 
 function LiveChat() {
-  const [isHidden, setIsHidden] = useState(false);
+  const [isHidden, setIsHidden] = useState(true);
 
   const toggleTextArea = () => {
     setIsHidden(!isHidden);
