@@ -21,7 +21,10 @@ function LiveChat() {
           <h3 className="mb-3 uppercase font-semibold">Live Chat</h3>
         </div>
 
-        <div className="mb-16 max-h-[60vh] overflow-y-auto">
+        <div
+          className={` ${
+            isHidden ? 'mb-16' : 'mb-20'
+          }  max-h-[60vh] overflow-y-auto border-b-2 border-neutral-20 `}>
           {DUMMY_DATA.map((item, index) => (
             <Message
               key={index}
