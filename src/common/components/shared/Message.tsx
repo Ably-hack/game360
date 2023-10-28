@@ -130,7 +130,7 @@ function Message({
         </div>
 
         <div
-          className="px-2 py-1 flex"
+          className="pr-2 py-1 flex"
           onClick={handleOpen}
           onKeyUp={onKeyUpOpenHandler}
           role="button"
@@ -147,7 +147,7 @@ function Message({
 
         <div className="px-2 py-1 flex">
           <Image
-            className="mr-1"
+            className=""
             src={`/svgs/share-icon.svg`}
             height={20}
             width={20}
