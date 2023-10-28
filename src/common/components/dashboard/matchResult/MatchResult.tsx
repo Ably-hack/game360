@@ -4,6 +4,7 @@ import {
   HEAD_TO_HEAD_RECORD_DATA,
   PREDICTION_DATA,
 } from 'src/common/constants';
+import MatchEvents from '../../shared/MatchEvents';
 import AboutMatch from './components/AboutMatch';
 import FormationSection from './components/FormationSection';
 import MatchLeagueTable from './components/MatchLeagueTable';
@@ -22,11 +23,11 @@ function MatchResult() {
       <div className="col-span-full md:col-span-7 lg:col-span-5 xl:col-span-6 mt-1">
         <div className="grid gap-1">
           {/* Start here */}
-
           <PredictionBar
             firstClub={PREDICTION_DATA[0]}
             secondClub={PREDICTION_DATA[1]}
           />
+          <MatchEvents />
           <Record data={HEAD_TO_HEAD_RECORD_DATA} />
           <Record data={CHELSEA_LAST_GAME_RECORD_DATA} />
           <Record data={ARSENAL_LAST_GAME_RECORD_DATA} />

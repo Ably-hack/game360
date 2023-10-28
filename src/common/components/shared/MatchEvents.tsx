@@ -28,7 +28,7 @@ function MatchEvents() {
       {data.map((item, index) => (
         <div
           key={index}
-          className="px-2 py-4 flex even:bg-grey-50 odd:bg-white">
+          className="px-2 py-4 flex odd:bg-grey-50 even:bg-white">
           <p className="text-sm font-medium w-[20%]">{item.time}</p>
           <div className=" w-[80%] flex">
             {item.image !== '' && (
