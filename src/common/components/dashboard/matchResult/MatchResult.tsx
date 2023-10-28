@@ -5,7 +5,7 @@ import {
   PREDICTION_DATA,
 } from 'src/common/constants';
 import AboutMatch from './components/AboutMatch';
-import FormationSection from './components/FormationSection';
+// import FormationSection from './components/FormationSection';
 import MatchLeagueTable from './components/MatchLeagueTable';
 import PredictionBar from './components/PredictionBar';
 import Record from './components/Record';
