@@ -11,6 +11,7 @@ type Message = {
   numberOfComments?: string;
   numberOfLikes?: string;
   showBorderTop?: boolean;
+  isReply?: boolean;
   children?: React.ReactNode;
 };
 
@@ -22,6 +23,7 @@ function Message({
   numberOfComments,
   numberOfLikes,
   showBorderTop = true,
+  isReply = false,
   children,
 }: Message) {
   const [liked, setLiked] = useState(false);
@@ -124,7 +126,7 @@ function Message({
               alt={'like-icon'}
             />
           )}
-          <p className="text-neutral-500">Like</p>
+          {!isReply && <p className="text-neutral-500">Like</p>}
         </div>
 
         <div
@@ -140,7 +142,7 @@ function Message({
             width={20}
             alt={'comment-icon'}
           />
-          <p className="text-neutral-500">Comment</p>
+          {!isReply && <p className="text-neutral-500">Comment</p>}
         </div>
 
         <div className="px-2 py-1 flex">
@@ -151,7 +153,8 @@ function Message({
             width={20}
             alt={'share-icon'}
           />
-          <p className="text-neutral-500">Share</p>
+
+          {!isReply && <p className="text-neutral-500">Share</p>}
         </div>
       </div>
 

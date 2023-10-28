@@ -33,7 +33,9 @@ function LiveChat() {
                 message={message}
                 showBorderTop={false}
                 numberOfComments="23"
-                numberOfLikes="2k"></Message>
+                numberOfLikes="2k"
+                isReply
+              />
             ))}
           </Message>
         ))}
