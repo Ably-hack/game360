@@ -40,6 +40,8 @@ body {
   background-color: rgb(247 247 247 / var(--tw-bg-opacity));
 }
 
+
+
 .news__container-card {
   container: newsCard / inline-size;
 }
@@ -68,6 +70,7 @@ body {
   }
 }
 @layer components {
+  
   .flex-justify-between {
     @apply flex items-center justify-between;
   }
