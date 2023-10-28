@@ -1,4 +1,4 @@
-import LiveChat from 'src/common/components/shared/LiveChat';
+import LiveChat from 'src/common/components/dashboard/fixture/components/LiveChat';
 
 function test() {
   return (

@@ -53,22 +53,32 @@ function Message({
     <div className={`p-2 ${showBorderTop && 'border-t-2 border-neutral-20'}`}>
       <div className="flex justify-between">
         <div className="flex ">
-          <Image
-            className="mr-2 rounded-lg bg-black"
-            src={`/images/player_img.png`}
-            height={20}
-            width={20}
-            alt={'player image'}
-          />
-          <p className="font-semibold text-sm mr-2 capitalize"> {name}</p>
+          <div className="w-[20px] h-[20px] relative mr-1 mt-1">
+            <Image
+              className="mr-2 rounded-lg bg-black"
+              src={`/images/user.png`}
+              fill
+              style={{
+                objectFit: 'contain',
+              }}
+              alt={'user image'}
+            />
+          </div>
+          <p className="max-w-[80px] max-h-[20px] mt-1 overflow-y-hidden break-keep font-semibold text-sm mr-2 capitalize overflow-x-hidden text-ellipsis">
+            {name}
+          </p>
 
-          <Image
-            className="mr-1"
-            src={`/images/verified.png`}
-            height={20}
-            width={20}
-            alt={'verified-icon'}
-          />
+          <div className="w-[20px] h-[20px] relative mt-1 mr- 1">
+            <Image
+              className=""
+              src={`/images/verified.png`}
+              fill
+              style={{
+                objectFit: 'contain',
+              }}
+              alt={'verified-icon'}
+            />
+          </div>
           <p className=" mr-2 overflow-x-hidden text-ellipsis max-w-[80px] text-neutral-500">
             {username}
           </p>
@@ -85,7 +95,6 @@ function Message({
             alt={'ellipsis'}
           />
         </div>
-        div
       </div>
 
       <div className="my-3">

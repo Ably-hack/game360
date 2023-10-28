@@ -1,7 +1,7 @@
 import { TextInput } from 'flowbite-react';
 import { DUMMY_DATA } from 'src/common/constants';
-import { CustomButton } from '../ui/Buttons/CustomButton';
-import Message from './Message';
+import Message from '../../../shared/Message';
+import { CustomButton } from '../../../ui/Buttons/CustomButton';
 
 const message: string = `The 22-year-old reported to England's St George's Park base
 on Monday for medical assessments despite Arsenal boss
@@ -9,7 +9,7 @@ Mikel Arteta insisting Saka was unavailable.`;
 
 function LiveChat() {
   return (
-    <div className=" py-6 px-4 overflow-hidden relative">
+    <div className=" py-6 px-4 overflow-hidden relative bg-white">
       <div className="">
         <h3 className="mb-3 uppercase font-semibold">Live Chat</h3>
       </div>
