@@ -1,3 +1,4 @@
+import MatchLeagueTable from '../matchResult/components/MatchLeagueTable';
 import LiveChat from './components/LiveChat';
 
 function MatchFixture() {
@@ -12,7 +13,10 @@ function MatchFixture() {
       </div>
       <div className="col-span-full md:col-span-4 lg:col-span-3 mt-1">
         {/* Right section */}
-        <LiveChat />
+        <div className="grid gap-1">
+          <LiveChat />
+          <MatchLeagueTable />
+        </div>
       </div>
     </div>
   );
