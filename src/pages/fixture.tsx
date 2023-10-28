@@ -1,5 +1,5 @@
 import MatchFixture from 'src/common/components/dashboard/fixture/MatchFixture';
-import MatchHeaderSection from 'src/common/components/dashboard/fixture/components/MatchHeaderSection';
+import MatchHeaderSection from 'src/common/components/dashboard/fixture/components/FixtureHeaderSection';
 import DashboardLayout from 'src/common/components/layout/DashboardLayout';
 
 function Fixture() {

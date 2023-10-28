@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { DEFAULT_IMAGE } from 'src/common/constants';
 import useMediaQuery from 'src/common/hooks/useMediaQuery';
 
-type MatchHeaderSection = {
+type FixtureHeaderSection = {
   teamOne?: string;
   teamTwo?: string;
   teamOneImage?: string;
@@ -18,7 +18,7 @@ type MatchHeaderSection = {
 
 const inter = Inter({ subsets: ['latin'] });
 
-function MatchHeaderSection({
+function FixtureHeaderSection({
   teamOne,
   teamTwo,
   teamOneImage,
@@ -29,7 +29,7 @@ function MatchHeaderSection({
   location,
   teamOneSlug,
   teamTwoSlug,
-}: MatchHeaderSection) {
+}: FixtureHeaderSection) {
   const isMobile = useMediaQuery('(max-width: 430px)');
 
   return (
@@ -92,4 +92,4 @@ function MatchHeaderSection({
   );
 }
 
-export default MatchHeaderSection;
+export default FixtureHeaderSection;
