@@ -1,3 +1,4 @@
+import FanClubNews from './components/FanClubNews';
 import LeftSection from './components/LeftSection';
 import TeamLeagueTable from './components/TeamLeagueTable';
 import TeamPerformance from './components/TeamPerformance';
@@ -21,6 +22,7 @@ const Team = () => {
       <div className="col-span-full lg:col-span-3 mt-1">
         {/* Right section */}
         <TeamSquad />
+        <FanClubNews/>
       </div>
     </div>
   );

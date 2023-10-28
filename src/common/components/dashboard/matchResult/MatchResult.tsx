@@ -9,6 +9,7 @@ import FormationSection from './components/FormationSection';
 import MatchLeagueTable from './components/MatchLeagueTable';
 import PredictionBar from './components/PredictionBar';
 import Record from './components/Record';
+import ChampionsNews from './components/ChampionsNews';
 
 function MatchResult() {
   return (
@@ -16,7 +17,7 @@ function MatchResult() {
       {/* left section */}
       <div className="col-span-full md:col-span-5 lg:col-span-4 xl:col-span-3 mt-1">
         <AboutMatch />
-        <FormationSection />
+        <ChampionsNews/>
       </div>
       {/* Middle section  */}
       <div className="col-span-full md:col-span-7 lg:col-span-5 xl:col-span-6 mt-1">
