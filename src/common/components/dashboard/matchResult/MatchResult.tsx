@@ -1,8 +1,14 @@
-import { PREDICTION_DATA } from 'src/common/constants';
+import {
+  ARSENAL_LAST_GAME_RECORD_DATA,
+  CHELSEA_LAST_GAME_RECORD_DATA,
+  HEAD_TO_HEAD_RECORD_DATA,
+  PREDICTION_DATA,
+} from 'src/common/constants';
 import AboutMatch from './components/AboutMatch';
 import FormationSection from './components/FormationSection';
 import MatchLeagueTable from './components/MatchLeagueTable';
 import PredictionBar from './components/PredictionBar';
+import Record from './components/Record';
 
 function MatchResult() {
   return (
@@ -21,6 +27,9 @@ function MatchResult() {
             firstClub={PREDICTION_DATA[0]}
             secondClub={PREDICTION_DATA[1]}
           />
+          <Record data={HEAD_TO_HEAD_RECORD_DATA} />
+          <Record data={CHELSEA_LAST_GAME_RECORD_DATA} />
+          <Record data={ARSENAL_LAST_GAME_RECORD_DATA} />
         </div>
       </div>
       {/* Right section */}
