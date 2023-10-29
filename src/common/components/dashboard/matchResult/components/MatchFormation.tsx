@@ -8,6 +8,7 @@ type MatchFormation = {
 function MatchFormation({ data }: MatchFormation) {
   return (
     <div>
+       
       {data.map((item, index) => (
         <div key={index}>
           <Accordion
