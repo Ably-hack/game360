@@ -21,11 +21,16 @@ function FormationSection() {
   return (
     <div className="bg-white ">
       <div className=" mx-auto sm:mx-auto w-full max-w-md px-3 py-6">
+      <div className="mb-2 ">
+        <h3 className="uppercase font-semibold">match formation</h3>
+      </div>
         <Tab.Group>
           <Tab.List className="flex space-x-1 rounded-3xl bg-grey-75 p-1">
             {FORMATION_TABS.map((tab, index) => {
               return (
+                
                 <Tab
+
                   key={index}
                   className={({ selected }) =>
                     classNames(
