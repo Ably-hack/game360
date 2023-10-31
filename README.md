@@ -97,4 +97,4 @@ All **`suggestions`** are welcome!
 
 #
 
-> ##### README Created by `Enebeli Emmanuel` for SportsConnect
+> ##### README Created by `Enebeli Emmanuel` for GAME360
