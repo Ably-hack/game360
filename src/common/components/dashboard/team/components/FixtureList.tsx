@@ -8,7 +8,7 @@ function FixtureList() {
       <p className="border-b-2 border-grey-50"></p>
       {DUMMY_DATA.map((_item, id) => {
         return (
-          <Link href={`/team`} passHref key={id}>
+          <Link href={`/match-result`} passHref key={id}>
             <FixtureCard
               teamOne="Chelsea"
               teamTwo="Arsenal"

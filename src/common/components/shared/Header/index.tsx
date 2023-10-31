@@ -160,7 +160,7 @@ const Header = () => {
     <div className={`bg-white sticky top-0 z-10`}>
       <header className="bg-white border-b 2xl:px-8 px-4">
         <div
-          className={`container mx-auto ${styles.container} ${styles.bigNav} py-4 hidden xl:block`}>
+          className={`xl:px-8 px-4 mx-auto ${styles.container} ${styles.bigNav} py-4 hidden xl:block`}>
           <div className="">
             <div className="flex justify-between">
               <div className="flex items-center flex-grow">
@@ -501,15 +501,10 @@ const Header = () => {
                 <Button
                   className="px-10"
                   color="failure"
-                  onClick={() => push("/signup")}
-                >
+                  onClick={() => push('/signup')}>
                   <Link href="/signup">Sign up</Link>
                 </Button>
-                <Button
-                  color="failure"
-                  outline
-                  onClick={() => push("/login")}
-                >
+                <Button color="failure" outline onClick={() => push('/login')}>
                   <Link href="/login" className="text-primary">
                     Log in
                   </Link>

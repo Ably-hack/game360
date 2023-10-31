@@ -3,8 +3,8 @@ import FixturesCard from '../../../shared/Card/FixturesCard';
 
 const TodayMatches = () => {
   return (
-    <div className="bg-white my-1">
-      <div className="  bg-neutral-400/10 xl:container mx-auto  flex">
+    <div className="bg-white xl:px-8 px-4 mx-auto my-1">
+      <div className="  bg-neutral-400/10 flex">
         <div className="bg-white  max-w-[10.25rem] p-4 flex items-center justify-center w-full">
           <p className="text-primary">Todays Matches</p>
         </div>
