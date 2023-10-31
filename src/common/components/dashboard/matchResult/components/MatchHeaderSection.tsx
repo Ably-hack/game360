@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
+import Link from 'next/link';
 import { DEFAULT_IMAGE } from 'src/common/constants';
 import useMediaQuery from 'src/common/hooks/useMediaQuery';
 
@@ -41,10 +42,10 @@ function MatchHeaderSection({
       className={`w-full py-6 px-3 bg-white ${inter.className} ${
         showBorderBottom && 'border-b-2 border-grey-50'
       }`}>
-      <div className=" max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="flex justify-between">
           <div className={`flex font-medium `}>
-            <div className={`flex flex-col-reverse md:flex-row`}>
+            <Link href={'/team'} className={`flex flex-col-reverse md:flex-row`}>
               <div className="mx-auto md:mr-6 my-auto">
                 <h3 className=" text-neutral-600 text-xl md:text-extra">
                   {isMobile ? teamOneSlug : teamOne}
@@ -59,7 +60,7 @@ function MatchHeaderSection({
                   alt={teamOne || 'Football Club'}
                 />
               </div>
-            </div>
+            </Link>
             <div className="my-auto ml-10">
               <p className="text-extra font-bold"> {teamOneScore} </p>
             </div>

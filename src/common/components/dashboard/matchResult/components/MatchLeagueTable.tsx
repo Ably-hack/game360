@@ -1,10 +1,13 @@
 import Image from 'next/image';
-import React, { Fragment } from 'react';
 import { MdKeyboardArrowUp } from 'react-icons/md';
 import { applyEvenRowColor } from 'src/common/utils';
-import { TEAM_LEAGUE_TABLE_DATA } from 'src/common/constants/tableData';
+import { LEAGUE_TABLE_DATA } from 'src/common/constants/tableData';
+import usePreview from 'src/common/hooks/usePreview';
 
 const MatchLeagueTable = () => {
+  const { open, handleOpen, onKeyUpHandler } = usePreview();
+  const label = open ? 'Table Preview' : 'Table Full View';
+  const data = open ? LEAGUE_TABLE_DATA : LEAGUE_TABLE_DATA.slice(0, 7);
   return (
     <div className="bg-white py-6 px-4">
       <div className="grid gap-4">
@@ -36,65 +39,72 @@ const MatchLeagueTable = () => {
               </tr>
             </thead>
             <tbody>
-              {TEAM_LEAGUE_TABLE_DATA.map((row, idx) => (
-                <Fragment key={idx}>
-                  {row.body.map((item, index) => (
-                    <tr
-                      key={index}
-                      className={` ${
-                        index === 2 && idx === 0
-                          ? 'bg-primary-light'
-                          : applyEvenRowColor(index)
-                      }`}>
-                      <td
-                        className="table-data py-2 px-2 text-left"
-                        colSpan={4}>
-                        <div className="flex items-center gap-4">
-                          <p className="table-data text-sm text-neutral-800">
-                            {item.num}
-                          </p>
-                          <div className="flex items-center gap-1.5">
-                            <div className="max-w-[1.13rem]">
-                              <Image
-                                src={`${item.image}`}
-                                className="w-full"
-                                alt={item.name}
-                                width={20}
-                                height={20}
-                              />
-                            </div>
-                            <p className="table-data text-neutral-700 text-xs">
-                              {item.name}
-                            </p>
-                          </div>
+              {data.map((row, index) => (
+                <tr
+                  key={index}
+                  className={` ${
+                    index === 2
+                      ? 'bg-primary-light'
+                      : applyEvenRowColor(index)
+                  }`}>
+                  <td className="table-data py-2 px-2 text-left" colSpan={4}>
+                    <div className="flex items-center gap-4">
+                      <p className="table-data text-sm text-neutral-800">
+                        {row.num}
+                      </p>
+                      <div className="flex items-center gap-1.5">
+                        <div className="max-w-[1.13rem]">
+                          <Image
+                            src={`${row.image}`}
+                            className="w-full"
+                            alt={row.name}
+                            width={20}
+                            height={20}
+                          />
                         </div>
-                      </td>
-                      <td className="table-data text-neutral-700 py-2 px-2 text-right text-xs">
-                        {1}
-                      </td>
-                      <td className="table-data text-neutral-700 py-2 px-2 text-right text-xs">
-                        {2}
-                      </td>
-                      <td className="table-data text-neutral-700 py-2 px-2 text-right text-xs">
-                        {3}
-                      </td>
-                      <td className="table-data text-neutral-700 py-2 px-2 text-right text-xs">
-                        {4}
-                      </td>
-                      <td className="table-data text-neutral-700 py-2 px-2 text-right text-xs">
-                        {5}
-                      </td>
-                    </tr>
-                  ))}
-                </Fragment>
+                        <p className="table-data text-neutral-700 text-xs">
+                          {row.name}
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="table-data text-neutral-700 py-2 px-2 text-right text-xs">
+                    {1}
+                  </td>
+                  <td className="table-data text-neutral-700 py-2 px-2 text-right text-xs">
+                    {2}
+                  </td>
+                  <td className="table-data text-neutral-700 py-2 px-2 text-right text-xs">
+                    {3}
+                  </td>
+                  <td className="table-data text-neutral-700 py-2 px-2 text-right text-xs">
+                    {4}
+                  </td>
+                  <td className="table-data text-neutral-700 py-2 px-2 text-right text-xs">
+                    {5}
+                  </td>
+                </tr>
               ))}
             </tbody>
           </table>
         </div>
 
-        <div className="text-center mt-3 flex items-center cursor-pointer justify-center">
-          <p className="text-primary text-xs">Table Preview </p>
-          <MdKeyboardArrowUp className="text-primary" size={18} />
+        <div
+          onClick={handleOpen}
+          onKeyUp={onKeyUpHandler}
+          role="button"
+          tabIndex={0}
+          className="text-center flex cursor-pointer justify-center space-x-1">
+          <p className="text-primary text-xs">{label} </p>
+          <MdKeyboardArrowUp
+            className="text-primary"
+            size={18}
+            style={{
+              ...(!open && {
+                transform: 'rotate(180deg)',
+              }),
+            }}
+          />
         </div>
       </div>
     </div>

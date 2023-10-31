@@ -58,7 +58,7 @@ function MatchEvents() {
         role="button"
         tabIndex={0}
         className="flex justify-center text-center text-primary">
-        <p className="mr-2">{label}</p>
+        <p className="mr-2 text-sm">{label}</p>
         {open ? (
           <HiChevronUp className="text-lg h-fit my-auto" />
         ) : (

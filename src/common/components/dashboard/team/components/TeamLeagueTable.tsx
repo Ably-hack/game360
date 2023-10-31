@@ -5,8 +5,12 @@ import { MdKeyboardArrowUp } from 'react-icons/md';
 import SelectDropDown from '../../../ui/DropDown';
 import { applyEvenRowColor } from 'src/common/utils';
 import { TEAM_LEAGUE_TABLE_DATA } from 'src/common/constants/tableData';
+import usePreview from 'src/common/hooks/usePreview';
 
 const TeamLeagueTable = () => {
+   const { open, handleOpen, onKeyUpHandler } = usePreview();
+   const label = open ? 'Table Preview' : 'Table Full View';
+   const data = open ? TEAM_LEAGUE_TABLE_DATA : TEAM_LEAGUE_TABLE_DATA.slice(0, 2);
   return (
     <div className="bg-white py-6 px-5">
       <div className="grid gap-4">
@@ -16,7 +20,7 @@ const TeamLeagueTable = () => {
           <SelectDropDown data={['2023-2024']} />
         </div>
         <div className="mt-2 relative overflow-x-auto ">
-          {TEAM_LEAGUE_TABLE_DATA.map((row, idx) => (
+          {data.map((row, idx) => (
             <table
               className="w-full text-sm text-gray-500 dark:text-gray-400 mb-4"
               key={idx}>
@@ -27,11 +31,21 @@ const TeamLeagueTable = () => {
                     colSpan={2}>
                     {row.title}
                   </th>
-                  <th className="px-2 bg-white font-semibold text-sm text-right">GP</th>
-                  <th className="px-2 bg-white font-semibold text-sm text-right">W</th>
-                  <th className="px-2 bg-white font-semibold text-sm text-right">D</th>
-                  <th className="px-2 bg-white font-semibold text-sm text-right">L</th>
-                  <th className="px-2 bg-white font-semibold text-sm text-right">P</th>
+                  <th className="px-2 bg-white font-semibold text-sm text-right">
+                    GP
+                  </th>
+                  <th className="px-2 bg-white font-semibold text-sm text-right">
+                    W
+                  </th>
+                  <th className="px-2 bg-white font-semibold text-sm text-right">
+                    D
+                  </th>
+                  <th className="px-2 bg-white font-semibold text-sm text-right">
+                    L
+                  </th>
+                  <th className="px-2 bg-white font-semibold text-sm text-right">
+                    P
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -39,7 +53,9 @@ const TeamLeagueTable = () => {
                   <tr
                     key={index}
                     className={` ${
-                      index === 2 && idx === 0 ? 'bg-primary-light' : applyEvenRowColor(index)
+                      index === 2 && idx === 0
+                        ? 'bg-primary-light'
+                        : applyEvenRowColor(index)
                     }`}>
                     <td className="table-data py-2 px-2 text-left" colSpan={2}>
                       <div className="flex items-center gap-4">
@@ -62,11 +78,21 @@ const TeamLeagueTable = () => {
                         </div>
                       </div>
                     </td>
-                    <td className="table-data text-neutral-700 py-2 px-2 text-right">{1}</td>
-                    <td className="table-data text-neutral-700 py-2 px-2 text-right">{2}</td>
-                    <td className="table-data text-neutral-700 py-2 px-2 text-right">{3}</td>
-                    <td className="table-data text-neutral-700 py-2 px-2 text-right">{4}</td>
-                    <td className="table-data text-neutral-700 py-2 px-2 text-right">{5}</td>
+                    <td className="table-data text-neutral-700 py-2 px-2 text-right">
+                      {1}
+                    </td>
+                    <td className="table-data text-neutral-700 py-2 px-2 text-right">
+                      {2}
+                    </td>
+                    <td className="table-data text-neutral-700 py-2 px-2 text-right">
+                      {3}
+                    </td>
+                    <td className="table-data text-neutral-700 py-2 px-2 text-right">
+                      {4}
+                    </td>
+                    <td className="table-data text-neutral-700 py-2 px-2 text-right">
+                      {5}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -74,9 +100,22 @@ const TeamLeagueTable = () => {
           ))}
         </div>
 
-        <div className="text-center mt-3 flex items-center cursor-pointer justify-center">
-          <p className="text-primary text-xs">Table Preview </p>
-          <MdKeyboardArrowUp className="text-primary" size={18} />
+        <div
+          onClick={handleOpen}
+          onKeyUp={onKeyUpHandler}
+          role="button"
+          tabIndex={0}
+          className="text-center flex space-x-1 cursor-pointer justify-center">
+          <p className="text-primary text-xs">{label} </p>
+          <MdKeyboardArrowUp
+            className="text-primary"
+            size={18}
+            style={{
+              ...(!open && {
+                transform: 'rotate(180deg)',
+              }),
+            }}
+          />
         </div>
       </div>
     </div>

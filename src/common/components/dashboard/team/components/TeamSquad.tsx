@@ -2,7 +2,13 @@ import Image from 'next/image';
 import React from 'react';
 import { TEAM_SQUAD } from 'src/common/constants';
 import { MdKeyboardArrowUp } from 'react-icons/md';
+import usePreview from 'src/common/hooks/usePreview';
 const TeamSquad = () => {
+  const { open, handleOpen, onKeyUpHandler } = usePreview();
+  const label = open ? 'Table Preview' : 'Table Full View';
+  const data = open
+    ? TEAM_SQUAD
+    : TEAM_SQUAD.slice(0, 4);
   return (
     <div className="bg-white py-4">
       <h3 className="uppercase font-bold text-neutral-900 mx-4 ">
@@ -34,7 +40,7 @@ const TeamSquad = () => {
             </tr>
           </thead>
           <tbody>
-            {TEAM_SQUAD.map((item, index) => (
+            {data.map((item, index) => (
               <tr
                 key={index}
                 className={`${
@@ -65,9 +71,22 @@ const TeamSquad = () => {
         </table>
       </div>
 
-      <div className="text-center mt-3 flex items-center cursor-pointer justify-center">
-        <p className="text-primary text-xs">Table Preview </p>
-        <MdKeyboardArrowUp className="text-primary" size={18} />
+      <div
+        onClick={handleOpen}
+        onKeyUp={onKeyUpHandler}
+        role="button"
+        tabIndex={0}
+        className="text-center mt-3 flex space-x-1 cursor-pointer justify-center">
+        <p className="text-primary text-xs">{label} </p>
+        <MdKeyboardArrowUp
+          className="text-primary"
+          size={18}
+          style={{
+            ...(!open && {
+              transform: 'rotate(180deg)',
+            }),
+          }}
+        />
       </div>
     </div>
   );
