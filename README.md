@@ -1,9 +1,9 @@
-# SportsConnect-MVP
+# GAME360-MVP
 
 ## Welcome to the SportsConnect MVP repository
 
 <p align="center" width="100%">
-  <img src="https://github.com/Ably-hack/game360/assets/58889001/2fd4fd66-d2cc-4fdf-af06-c79512ef0d93" alt="site"/>
+  <img src="https://github.com/Ably-hack/game360/assets/58889001/c016cf8c-0de0-4b5a-b411-93977613c0bf" alt="site"/>
 </p>
 
 > ## Table of contents
@@ -22,7 +22,7 @@
 > ## Overview
 
 <p align="justify">
-"SportsConnect" is a comprehensive real-time sports engagement platform designed to enhance the fan experience and connect sports enthusiasts with their favorite teams and athletes. This innovative application caters to the passionate world of sports, offering fans an immersive and interactive way to follow, engage, and participate in live sports events.
+"GAME360" is a comprehensive real-time sports engagement platform designed to enhance the fan experience and connect sports enthusiasts with their favorite teams and athletes. This innovative application caters to the passionate world of sports, offering fans an immersive and interactive way to follow, engage, and participate in live sports events.
 </p>
 
 #
@@ -65,9 +65,11 @@ Change directory to the cloned repo and set the original game360 repository as t
 
 ## View attribution files here
 
-## Explainer video (User POV)
+## Demo video (User POV)
 
-- [Frontend Deployment]()
+https://github.com/Ably-hack/game360/assets/58889001/b83d33af-8b3c-436d-a06d-afc399af692c
+
+- [Frontend Deployment](https://game360.vercel.app/)
 - [Figma design](https://www.figma.com/file/QWAqeSwpH4Je4gGjXYPBnL/SportsConnect?node-id=115%3A2&mode=dev)
 
 > ## Contributors
