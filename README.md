@@ -1,6 +1,6 @@
 # GAME360-MVP
 
-## Welcome to the SportsConnect MVP repository
+## Welcome to the GAME360-MVP repository
 
 <p align="center" width="100%">
   <img src="https://github.com/Ably-hack/game360/assets/58889001/c016cf8c-0de0-4b5a-b411-93977613c0bf" alt="site"/>
@@ -72,7 +72,7 @@ https://github.com/Ably-hack/game360/assets/58889001/b83d33af-8b3c-436d-a06d-afc
 - [Frontend Deployment](https://game360.vercel.app/)
 - [Figma design](https://www.figma.com/file/QWAqeSwpH4Je4gGjXYPBnL/SportsConnect?node-id=115%3A2&mode=dev)
 - [project media](https://pulsefire.notion.site/pulsefire/Game360-Ably-Hack-6c07c5dbe063429c85d24f930e0b2e7d)
-> ## Contributors
+  > ## Contributors
 
 This Project was created by these awesome dedicated members
 
@@ -97,4 +97,4 @@ All **`suggestions`** are welcome!
 
 #
 
-> ##### README Created by `Enebeli Emmanuel` for SportsConnect
+> ##### README Created by `Enebeli Emmanuel` for GAME360
