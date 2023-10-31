@@ -1,6 +1,6 @@
 # GAME360-MVP
 
-## Welcome to the SportsConnect MVP repository
+## Welcome to the GAME360-MVP  repository
 
 <p align="center" width="100%">
   <img src="https://github.com/Ably-hack/game360/assets/58889001/c016cf8c-0de0-4b5a-b411-93977613c0bf" alt="site"/>
