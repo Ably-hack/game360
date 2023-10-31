@@ -71,7 +71,7 @@ https://github.com/Ably-hack/game360/assets/58889001/b83d33af-8b3c-436d-a06d-afc
 
 - [Frontend Deployment](https://game360.vercel.app/)
 - [Figma design](https://www.figma.com/file/QWAqeSwpH4Je4gGjXYPBnL/SportsConnect?node-id=115%3A2&mode=dev)
-
+- [project media](https://pulsefire.notion.site/pulsefire/Game360-Ably-Hack-6c07c5dbe063429c85d24f930e0b2e7d)
 > ## Contributors
 
 This Project was created by these awesome dedicated members
