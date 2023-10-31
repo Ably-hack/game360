@@ -29,10 +29,10 @@
 
 > ## Core Features Implemented
 
-- Live Sports Feed?: SportsConnect provides a real-time feed of live sports events, including scores, play-by-play updates, and statistics. Users can select their favorite teams and players to customize their feed.
-- Real-Time Fan Interactions: During games, fans can engage with each other through live chat, voice commentary, and fan challenges, fostering a sense of camaraderie and competition.
+- Live Sports Feed?: GAME360 provides a real-time feed of live sports events, including scores, play-by-play updates, and statistics. Users can select their favorite teams and players to customize their feed.
+- Real-Time Fan Interactions: During games, fans can engage with each other through live chat, and fan challenges, fostering a sense of camaraderie and competition.
 - Customized Notifications: Users receive real-time notifications for game highlights, scores, and player milestones, ensuring they never miss a moment.
-- Predictive Gaming: SportsConnect includes a real-time prediction game where fans can make predictions about the outcome of in-game events (e.g., next goal, player stats)
+- Predictive Gaming: GAME360 includes a real-time prediction game where fans can make predictions about the outcome of in-game events (e.g., next goal, player stats)
 
 #
 
