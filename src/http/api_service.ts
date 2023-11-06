@@ -3,6 +3,8 @@ import axios from 'axios';
 import Endpoints from './endpoints';
 import HttpSuccessDataHandler from 'src/utils/http_success_handler';
 import HttpErrorHandler from 'src/utils/http_error_handler';
+import { getLoggedInUserFromLocalStorage } from 'src/utils/user_utils';
+import { User } from 'src/types/User';
 
 export default class APIService {
   static async login(requestBody: any, cb: any) {
@@ -105,5 +107,15 @@ export default class APIService {
       .catch((error) => {
         cb(null, HttpErrorHandler.getErrorResponseData(error));
       })
+  }
+
+  static async getRequestHeaders(moreHeaders = {}) {
+    const headers: User = {};
+    const loggedInUser = getLoggedInUserFromLocalStorage();
+    if (loggedInUser) {
+      headers["Bearer"] = loggedInUser["accessToken"];
+    }
+    const allHeaders = { ...headers, ...moreHeaders };
+    return allHeaders;
   }
 }
