@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
-import { DEFAULT_IMAGE } from 'src/common/constants';
+import { DEFAULT_IMAGE } from 'src/constants';
 import { FixtureCard } from 'src/types/FixtureCard';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -18,9 +18,8 @@ function FixtureCard({
 
   return (
     <div
-      className={`w-full py-4 px-3 bg-white ${inter.className} ${
-        showBorderBottom && 'border-b-2 border-grey-50'
-      }`}>
+      className={`w-full py-4 px-3 bg-white ${inter.className} ${showBorderBottom && 'border-b-2 border-grey-50'
+        }`}>
       <div className="flex justify-between">
         <div className={`flex font-medium `}>
           <div className="mr-2">

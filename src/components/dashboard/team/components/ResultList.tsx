@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { DUMMY_DATA } from 'src/common/constants';
+import { DUMMY_DATA } from 'src/constants';
 import ResultCard from '../../../shared/Card/ResultCard';
 
 function ResultList() {

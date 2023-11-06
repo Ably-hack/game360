@@ -1,6 +1,6 @@
-import { FOOTBALL_TEAMS, PERFORMANCE_DATA } from 'src/common/constants';
+import { FOOTBALL_TEAMS, PERFORMANCE_DATA } from 'src/constants';
+import { applyEvenRowColor } from 'src/utils';
 import SelectDropDown from '../../../../common/DropDown';
-import { applyEvenRowColor } from 'src/common/utils';
 
 const TeamPerformance = () => {
   return (

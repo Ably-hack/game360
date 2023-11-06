@@ -1,6 +1,6 @@
-import DashboardLayout from 'src/common/components/layout/DashboardLayout';
-import HeaderSection from 'src/common/components/dashboard/team/components/HeaderSection';
-import Team from 'src/common/components/dashboard/team/Team';
+import Team from 'src/components/dashboard/team/Team';
+import HeaderSection from 'src/components/dashboard/team/components/HeaderSection';
+import DashboardLayout from 'src/components/layout/DashboardLayout';
 
 function TeamAndPlayers() {
   return (

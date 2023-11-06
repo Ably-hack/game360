@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { DUMMY_DATA } from 'src/common/constants';
+import { DUMMY_DATA } from 'src/constants';
 import FixtureCard from '../../../shared/Card/FixtureCard';
 
 function FixtureList() {

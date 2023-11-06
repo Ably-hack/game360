@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-import { TEAM_SQUAD } from 'src/common/constants';
+import { TEAM_SQUAD } from 'src/constants';
 import { MdKeyboardArrowUp } from 'react-icons/md';
-import usePreview from 'src/common/hooks/usePreview';
+import usePreview from 'src/hooks/usePreview';
 const TeamSquad = () => {
   const { open, handleOpen, onKeyUpHandler } = usePreview();
   const label = open ? 'Table Preview' : 'Table Full View';
@@ -43,9 +43,8 @@ const TeamSquad = () => {
             {data.map((item, index) => (
               <tr
                 key={index}
-                className={`${
-                  index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
-                }  border-b dark:bg-gray-900 dark:border-gray-700`}>
+                className={`${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
+                  }  border-b dark:bg-gray-900 dark:border-gray-700`}>
                 <td className="px-4 py-2">
                   <div className="flex items-center gap-1">
                     <div className="max-w-[1.13rem]">

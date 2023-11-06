@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { HiChevronDown, HiChevronUp } from 'react-icons/hi';
-import { MATCH_EVENTS_DATA } from 'src/common/constants/matchEventData';
+import { MATCH_EVENTS_DATA } from 'src/constants/matchEventData';
 
 function MatchEvents() {
   const [open, setOpen] = useState(false);

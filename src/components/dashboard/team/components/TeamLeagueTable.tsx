@@ -1,11 +1,10 @@
 import Image from 'next/image';
-import React from 'react';
-import { FOOTBALL_TEAMS } from 'src/common/constants';
 import { MdKeyboardArrowUp } from 'react-icons/md';
+import { FOOTBALL_TEAMS } from 'src/constants';
+import { TEAM_LEAGUE_TABLE_DATA } from 'src/constants/tableData';
+import usePreview from 'src/hooks/usePreview';
+import { applyEvenRowColor } from 'src/utils';
 import SelectDropDown from '../../../../common/DropDown';
-import { applyEvenRowColor } from 'src/common/utils';
-import { TEAM_LEAGUE_TABLE_DATA } from 'src/common/constants/tableData';
-import usePreview from 'src/common/hooks/usePreview';
 
 const TeamLeagueTable = () => {
   const { open, handleOpen, onKeyUpHandler } = usePreview();
@@ -53,8 +52,8 @@ const TeamLeagueTable = () => {
                   <tr
                     key={index}
                     className={` ${index === 2 && idx === 0
-                        ? 'bg-primary-light'
-                        : applyEvenRowColor(index)
+                      ? 'bg-primary-light'
+                      : applyEvenRowColor(index)
                       }`}>
                     <td className="table-data py-2 px-2 text-left" colSpan={2}>
                       <div className="flex items-center gap-4">
