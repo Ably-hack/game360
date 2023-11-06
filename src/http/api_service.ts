@@ -26,4 +26,84 @@ export default class APIService {
         cb(null, HttpErrorHandler.getErrorResponseData(error));
       });
   }
+
+  static async fetchLeagues(cb: any) {
+    axios.get(`${Endpoints.FETCH_LEAGUES}`)
+      .then((response) => {
+        cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
+      })
+      .catch((error) => {
+        cb(null, HttpErrorHandler.getErrorResponseData(error));
+      })
+  }
+
+  static async fetchLeagueTeams(cb: any) {
+    axios.get(`${Endpoints.FETCH_LEAGUE_TEAMS}`)
+      .then((response) => {
+        cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
+      })
+      .catch((error) => {
+        cb(null, HttpErrorHandler.getErrorResponseData(error));
+      })
+  }
+
+  static async fetchTeams(cb: any) {
+    axios.get(`${Endpoints.FETCH_TEAM}`)
+      .then((response) => {
+        cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
+      })
+      .catch((error) => {
+        cb(null, HttpErrorHandler.getErrorResponseData(error));
+      })
+  }
+
+  static fetchLeagueFixtures(cb: any) {
+    axios.get(`${Endpoints.FETCH_LEAGUE_FIXTURES}`)
+      .then((response) => {
+        cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
+      })
+      .catch((error) => {
+        cb(null, HttpErrorHandler.getErrorResponseData(error));
+      })
+  }
+
+  static fetchTeamFixtures(cb: any) {
+    axios.get(`${Endpoints.FETCH_TEAM_FIXTURES}`)
+      .then((response) => {
+        cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
+      })
+      .catch((error) => {
+        cb(null, HttpErrorHandler.getErrorResponseData(error));
+      })
+  }
+
+  static fetchFixtureDetails(cb: any) {
+    axios.get(`${Endpoints.FETCH_FIXTURE_DETAILS}`)
+      .then((response) => {
+        cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
+      })
+      .catch((error) => {
+        cb(null, HttpErrorHandler.getErrorResponseData(error));
+      })
+  }
+
+  static fetchLeagueTable(cb: any) {
+    axios.get(`${Endpoints.FETCH_LEAGUE_TABLE}`)
+      .then((response) => {
+        cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
+      })
+      .catch((error) => {
+        cb(null, HttpErrorHandler.getErrorResponseData(error));
+      })
+  }
+
+  static fetchHead2HeadStatistics(cb: any) {
+    axios.get(`${Endpoints.FETCH_HEAD2HEAD_STATISTICS}`)
+      .then((response) => {
+        cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
+      })
+      .catch((error) => {
+        cb(null, HttpErrorHandler.getErrorResponseData(error));
+      })
+  }
 }
