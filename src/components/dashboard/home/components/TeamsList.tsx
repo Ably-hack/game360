@@ -1,15 +1,32 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import {
-  DEFAULT_IMAGE,
-  DUMMY_DATA,
-  FOOTBALL_TEAMS,
+  DEFAULT_IMAGE
 } from 'src/constants';
-import SelectDropDown from '../../../../common/DropDown';
+import APIService from 'src/http/api_service';
+import { Team } from 'src/types/League';
 import ClubCard from '../../../shared/Card/ClubCard';
+interface Props {
+  leagueList: any[]
+}
 
-const TeamsList = () => {
+const TeamsList = ({ leagueList }: Props) => {
+  const [team, setTeam] = useState<Team[]>([]);
+  const [value, setValue] = useState<string>('');
+
+  useEffect(() => {
+    APIService.fetchLeagueTeams(value, (response: any, error: any) => {
+      if (error) {
+        console.log(error);
+        return;
+      }
+      const responseData = response?.data ?? [];
+      setTeam(responseData);
+    })
+  }, [value]);
+
   return (
     <div className="py-6 px-4 bg-white">
       <div className="flex mb-4" aria-label="header-section">
@@ -27,18 +44,46 @@ const TeamsList = () => {
         </h2>
       </div>
       <div>
-        <SelectDropDown data={FOOTBALL_TEAMS} />
+        <select
+          id="football_teams"
+          className={`w-full py-2 px-4 text-grey-100 bg-grey-50 rounded-none 
+        focus:ring-0 focus:outline-none ring-grey-50 border-0
+        font-medium text-sm
+        `}
+          value={value}
+          onChange={(e) => {
+            setValue(e.target.value);
+          }}
+        >
+          {leagueList &&
+            leagueList.map((item) => {
+              return (
+                <option key={item?.id} className="" value={item?.id}>
+                  {item?.name}
+                </option>
+              );
+            })
+          }
+        </select>
       </div>
-      <div>
-        {DUMMY_DATA.map((_item, id) => {
-          return (
-            <Link href={`/team`} passHref key={id}>
-              <div className="px-6 py-2">
-                <ClubCard showBorderBottom={true} />
-              </div>
-            </Link>
-          );
-        })}
+
+      <div>{
+        value && (
+          team?.length > 0 && (
+            team.map((item) => {
+              return (
+                <Link href={`/team`} passHref key={item.id}>
+                  <div className="px-6 py-2">
+                    <ClubCard
+                      showBorderBottom={true}
+                      clubTitle={item.name}
+                      imageLink={item.logo} />
+                  </div>
+                </Link>
+              );
+            })
+          )
+        )}
       </div>
     </div>
   );

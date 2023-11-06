@@ -1,16 +1,32 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useEffect, useState } from "react";
 import { COMPETITION } from "src/constants";
 import useMediaQuery from "src/hooks/useMediaQuery";
+import APIService from "src/http/api_service";
 import { FootballNews, MatchCardList, TeamsList } from ".";
 import TeamsTab from "../../shared/Tabs/TeamsTab";
 
 const Home = () => {
+  const [leagues, setLeagues] = useState<any[]>([]);
+
+  useEffect(() => {
+    APIService.fetchLeagues((response: any, error: any) => {
+      if (error) {
+        console.log(error);
+        return;
+      }
+      const responseData = response?.data ?? [];
+      setLeagues(responseData);
+    })
+  }, [])
+
   const isDesktop = useMediaQuery('(min-width: 768px)');
   return (
     <div className="text-neutral-400">
       <div className="grid grid-cols-12">
         {isDesktop ? (
           <div className="col-span-full md:col-span-4 lg:col-span-3  m-1">
-            <TeamsList />
+            <TeamsList leagueList={leagues} />
           </div>
         ) : (
           <div className="col-span-full">

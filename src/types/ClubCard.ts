@@ -1,6 +1,6 @@
 interface ClubCard {
   imageLink?: string;
-  clubTitle?: string;
+  clubTitle?: string | null;
   showBorderBottom?: boolean;
 }
 
