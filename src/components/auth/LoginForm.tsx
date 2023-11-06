@@ -3,12 +3,15 @@ import { TextInput } from 'flowbite-react';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { HiOutlineEye } from 'react-icons/hi';
+import { useDispatch } from 'react-redux';
 import { ClipLoader } from "react-spinners";
 import { toast } from "react-toastify";
 import APIService from 'src/http/api_service';
+import { setLoggedIn, setLoggedInUser } from 'src/store/slices/user_slice';
 import { Image } from '../shared';
 
 function LoginForm() {
+  const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -31,7 +34,10 @@ function LoginForm() {
         toast.error(error, { theme: 'colored' });
       }
       setLoading(false);
-      console.log(response, "#data");
+      const responseData = response?.data ?? {};
+      localStorage.clear();
+      dispatch(setLoggedInUser({ ...responseData }));
+      dispatch(setLoggedIn(true));
     });
   };
 

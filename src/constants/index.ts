@@ -374,6 +374,11 @@ const ARSENAL_LAST_GAME_RECORD_DATA = {
     },
   ],
 };
+
+const Strings = {
+  LOGGED_IN_USER: "__logged_in_user__",
+}
+
 export {
   ARSENAL_PlAYERS,
   CHELSEA_PlAYERS,
@@ -389,4 +394,5 @@ export {
   HEAD_TO_HEAD_RECORD_DATA,
   CHELSEA_LAST_GAME_RECORD_DATA,
   ARSENAL_LAST_GAME_RECORD_DATA,
+  Strings
 };
