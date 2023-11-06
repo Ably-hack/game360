@@ -45,8 +45,8 @@ export default class APIService {
       })
   }
 
-  static async fetchLeagueTeams(cb: any) {
-    axios.get(`${Endpoints.FETCH_LEAGUE_TEAMS}`, {
+  static async fetchLeagueTeams(league_id: string, cb: any) {
+    axios.get(`${Endpoints.FETCH_LEAGUE_TEAMS.replace(":league_id", league_id)}`, {
       headers: await this.getRequestHeaders()
     })
       .then((response) => {
