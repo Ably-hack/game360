@@ -1,12 +1,43 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { TextInput } from 'flowbite-react';
 import Image from 'next/image';
 import { HiOutlineEye } from 'react-icons/hi';
+import React, { useState } from 'react';
+import APIService from 'src/http/api_service';
+import { toast } from "react-toastify";
+import { ClipLoader } from 'react-spinners';
 
 function SignupForm() {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const handleFieldChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e: React.SyntheticEvent<EventTarget>): void => {
+    e.preventDefault();
+    setLoading(true);
+    APIService.login(formData, (response: any, error: any) => {
+      if (error) {
+        setLoading(false);
+        toast.error(error, { theme: 'colored' });
+      }
+      setLoading(false);
+      console.log(response, "#data");
+    });
+  };
+
   return (
     <>
       <div className="py-4">
-        <form>
+        <form onSubmit={handleSubmit} method='POST'>
           <div className="py-1">
             <TextInput
               name="email"
@@ -15,6 +46,7 @@ function SignupForm() {
               required
               type="email"
               className=""
+              onChange={handleFieldChange}
             />
           </div>
           <div className="py-1">
@@ -25,6 +57,7 @@ function SignupForm() {
               required
               rightIcon={HiOutlineEye}
               type="password"
+              onChange={handleFieldChange}
             />
           </div>
           <div className="w-full mt-4">
@@ -33,7 +66,7 @@ function SignupForm() {
               className="bg-primary hover:bg-red-500 w-full rounded-md p-2
               text-white leading-5 font-medium focus:outline-white focus:ring 
               ">
-              Signup
+              {loading ? <ClipLoader color="text-white" size={20} /> : "Signup"}
             </button>
           </div>
         </form>

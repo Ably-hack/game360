@@ -1,13 +1,46 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { TextInput } from 'flowbite-react';
 import Link from 'next/link';
+import React, { useState } from 'react';
 import { HiOutlineEye } from 'react-icons/hi';
+import { ClipLoader } from "react-spinners";
+import { toast } from "react-toastify";
+import APIService from 'src/http/api_service';
 import { Image } from '../shared';
 
 function LoginForm() {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const handleFieldChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e: React.SyntheticEvent<EventTarget>): void => {
+    e.preventDefault();
+    setLoading(true);
+    APIService.login(formData, (response: any, error: any) => {
+      if (error) {
+        setLoading(false);
+        toast.error(error, { theme: 'colored' });
+      }
+      setLoading(false);
+      console.log(response, "#data");
+    });
+  };
+
   return (
     <>
       <div className="py-4">
-        <form>
+        <form
+          onSubmit={handleSubmit}
+          method="POST">
           <div className="py-1">
             <TextInput
               name="email"
@@ -16,6 +49,7 @@ function LoginForm() {
               required
               type="email"
               className=""
+              onChange={handleFieldChange}
             />
           </div>
           <div className="py-1">
@@ -26,6 +60,7 @@ function LoginForm() {
               required
               rightIcon={HiOutlineEye}
               type="password"
+              onChange={handleFieldChange}
             />
           </div>
 
@@ -42,7 +77,7 @@ function LoginForm() {
               className="bg-primary hover:bg-red-500 w-full rounded-md p-2
               text-white leading-5 font-medium focus:outline-white focus:ring 
               ">
-              Login
+              {loading ? <ClipLoader color="text-white" size={20} /> : "Login"}
             </button>
           </div>
         </form>
