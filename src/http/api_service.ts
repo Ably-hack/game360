@@ -9,7 +9,9 @@ import { User } from 'src/types/User';
 export default class APIService {
   static async login(requestBody: any, cb: any) {
     axios
-      .post(`${Endpoints.LOGIN}`, requestBody)
+      .post(`${Endpoints.LOGIN}`, requestBody, {
+        headers: await this.getRequestHeaders()
+      })
       .then((response) => {
         cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
       })
@@ -20,7 +22,9 @@ export default class APIService {
 
   static async register(requestBody: object, cb: any) {
     axios
-      .post(`${Endpoints.REGISTER}`, requestBody)
+      .post(`${Endpoints.REGISTER}`, requestBody, {
+        headers: await this.getRequestHeaders()
+      })
       .then((response) => {
         cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
       })
@@ -30,7 +34,9 @@ export default class APIService {
   }
 
   static async fetchLeagues(cb: any) {
-    axios.get(`${Endpoints.FETCH_LEAGUES}`)
+    axios.get(`${Endpoints.FETCH_LEAGUES}`, {
+      headers: await this.getRequestHeaders()
+    })
       .then((response) => {
         cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
       })
@@ -40,7 +46,9 @@ export default class APIService {
   }
 
   static async fetchLeagueTeams(cb: any) {
-    axios.get(`${Endpoints.FETCH_LEAGUE_TEAMS}`)
+    axios.get(`${Endpoints.FETCH_LEAGUE_TEAMS}`, {
+      headers: await this.getRequestHeaders()
+    })
       .then((response) => {
         cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
       })
@@ -50,7 +58,10 @@ export default class APIService {
   }
 
   static async fetchTeams(cb: any) {
-    axios.get(`${Endpoints.FETCH_TEAM}`)
+    axios.get(`${Endpoints.FETCH_TEAM}`, {
+      headers: await this.getRequestHeaders()
+    })
+
       .then((response) => {
         cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
       })
@@ -60,7 +71,9 @@ export default class APIService {
   }
 
   static async fetchLeagueFixtures(cb: any) {
-    axios.get(`${Endpoints.FETCH_LEAGUE_FIXTURES}`)
+    axios.get(`${Endpoints.FETCH_LEAGUE_FIXTURES}`, {
+      headers: await this.getRequestHeaders()
+    })
       .then((response) => {
         cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
       })
@@ -70,7 +83,9 @@ export default class APIService {
   }
 
   static async fetchTeamFixtures(cb: any) {
-    axios.get(`${Endpoints.FETCH_TEAM_FIXTURES}`)
+    axios.get(`${Endpoints.FETCH_TEAM_FIXTURES}`, {
+      headers: await this.getRequestHeaders()
+    })
       .then((response) => {
         cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
       })
@@ -80,7 +95,9 @@ export default class APIService {
   }
 
   static async fetchFixtureDetails(cb: any) {
-    axios.get(`${Endpoints.FETCH_FIXTURE_DETAILS}`)
+    axios.get(`${Endpoints.FETCH_FIXTURE_DETAILS}`, {
+      headers: await this.getRequestHeaders()
+    })
       .then((response) => {
         cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
       })
@@ -90,7 +107,9 @@ export default class APIService {
   }
 
   static async fetchLeagueTable(cb: any) {
-    axios.get(`${Endpoints.FETCH_LEAGUE_TABLE}`)
+    axios.get(`${Endpoints.FETCH_LEAGUE_TABLE}`, {
+      headers: await this.getRequestHeaders()
+    })
       .then((response) => {
         cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
       })
@@ -100,7 +119,9 @@ export default class APIService {
   }
 
   static async fetchHead2HeadStatistics(cb: any) {
-    axios.get(`${Endpoints.FETCH_HEAD2HEAD_STATISTICS}`)
+    axios.get(`${Endpoints.FETCH_HEAD2HEAD_STATISTICS}`, {
+      headers: await this.getRequestHeaders()
+    })
       .then((response) => {
         cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
       })
