@@ -3,13 +3,6 @@ import { Image } from '..';
 import { footerData } from 'src/constants/website';
 
 const Footer = () => {
-  // const footerItems = [
-  //   { href: '/careers', item: 'Careers' },
-  //   { href: '/contact', item: 'Contact' },
-  //   { href: '/data-policy', item: 'Data Policy' },
-  //   { href: '/terms', item: 'Terms' },
-  //   { href: '/privacy', item: 'Privacy' },
-  // ];
   return (
     <div className="2xl:px-8 px-4 pb-5 mt-8 pt-7 border-t bg-white">
       <div className="">

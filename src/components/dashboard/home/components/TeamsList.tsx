@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -5,10 +6,10 @@ import {
   DUMMY_DATA,
   FOOTBALL_TEAMS,
 } from 'src/constants';
-import ClubCard from '../../../shared/Card/ClubCard';
 import SelectDropDown from '../../../../common/DropDown';
+import ClubCard from '../../../shared/Card/ClubCard';
 
-function TeamsList() {
+const TeamsList = () => {
   return (
     <div className="py-6 px-4 bg-white">
       <div className="flex mb-4" aria-label="header-section">

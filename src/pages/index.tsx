@@ -5,8 +5,8 @@ import { ToastContainer } from 'react-toastify';
 export default function HomePage() {
   return (
     <>
-      <ToastContainer />
       <DashboardLayout>
+        <ToastContainer />
         <Home />
       </DashboardLayout>
     </>

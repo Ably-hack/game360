@@ -192,25 +192,21 @@ const Header = () => {
                             <div
                               onMouseOver={() => handleShowMenu(navItem)}
                               onMouseLeave={handleHideMenu}
-                              className={`hidden absolute peer-hover:flex hover:flex flex-col bg-white ${
-                                styles['menu-content']
-                              } ${
-                                showSubMenu.includes('teams-')
+                              className={`hidden absolute peer-hover:flex hover:flex flex-col bg-white ${styles['menu-content']
+                                } ${showSubMenu.includes('teams-')
                                   ? styles['sub-menu-open']
                                   : ''
-                              } overflow-hidden`}>
+                                } overflow-hidden`}>
                               <div className="relative flex bg-white">
                                 <div
-                                  className={`w-1/2 flex-grow flex flex-col gap- ${
-                                    showSubMenu.includes('teams-') && 'pr-7'
-                                  }`}>
+                                  className={`w-1/2 flex-grow flex flex-col gap- ${showSubMenu.includes('teams-') && 'pr-7'
+                                    }`}>
                                   {sub.map((item: any, i: number) => (
                                     <Link
                                       href={`${item?.href}`}
-                                      className={`z-10 ${styles['nav-item']} ${
-                                        showSubMenu.includes('teams-' + i) &&
+                                      className={`z-10 ${styles['nav-item']} ${showSubMenu.includes('teams-' + i) &&
                                         styles['active']
-                                      } flex flex-col cursor-pointer`}
+                                        } flex flex-col cursor-pointer`}
                                       key={i}
                                       onMouseOver={() =>
                                         handleShowSubMenu(navItem, i)
@@ -228,11 +224,10 @@ const Header = () => {
                                 </div>
                                 {navItem === 'Teams & Players' && (
                                   <div
-                                    className={`${styles['sub-menu']} pl-7 ${
-                                      showSubMenu.includes('teams-')
-                                        ? 'block'
-                                        : 'hidden'
-                                    } w-1/2`}>
+                                    className={`${styles['sub-menu']} pl-7 ${showSubMenu.includes('teams-')
+                                      ? 'block'
+                                      : 'hidden'
+                                      } w-1/2`}>
                                     {getSubMenu(sub)?.length > 0 &&
                                       getSubMenu(sub)?.map(
                                         (item: any, i: number) =>
@@ -344,9 +339,8 @@ const Header = () => {
             </div>
           </div>
           <div
-            className={`fixed inset-0 bg-white ${styles.mobileList} ${
-              showMobileList ? `block` : `hidden`
-            }`}>
+            className={`fixed inset-0 bg-white ${styles.mobileList} ${showMobileList ? `block` : `hidden`
+              }`}>
             <div className={`${styles['nav-content']} relative flex flex-col`}>
               <div
                 className="cursor-pointer"
@@ -382,22 +376,19 @@ const Header = () => {
                               <>
                                 {sub.length > 0 ? (
                                   <Disclosure.Button
-                                    className={`${
-                                      !(
-                                        showSubMenu &&
-                                        showSubMenu.includes('teams-')
-                                      )
-                                        ? `block`
-                                        : `hidden`
-                                    } ${
-                                      styles['menu-content']
-                                    } flex items-center w-full !text-md font-medium`}>
+                                    className={`${!(
+                                      showSubMenu &&
+                                      showSubMenu.includes('teams-')
+                                    )
+                                      ? `block`
+                                      : `hidden`
+                                      } ${styles['menu-content']
+                                      } flex items-center w-full !text-md font-medium`}>
                                     {navItem}
                                     <FiChevronDown
                                       size={18}
-                                      className={`${
-                                        open && 'rotate-180'
-                                      } inline ml-auto`}
+                                      className={`${open && 'rotate-180'
+                                        } inline ml-auto`}
                                     />
                                   </Disclosure.Button>
                                 ) : (
@@ -412,32 +403,30 @@ const Header = () => {
                                   <Disclosure.Panel
                                     className={`${styles['menu-children-content']} text-xs `}>
                                     <div
-                                      className={`${styles['nav-items']} pt-3 ${
-                                        !(
-                                          showSubMenu &&
-                                          showSubMenu.includes('teams-')
-                                        )
-                                          ? `block`
-                                          : `hidden`
-                                      }`}>
+                                      className={`${styles['nav-items']} pt-3 ${!(
+                                        showSubMenu &&
+                                        showSubMenu.includes('teams-')
+                                      )
+                                        ? `block`
+                                        : `hidden`
+                                        }`}>
                                       {sub.map((item: any, i: number) => (
                                         <div
-                                          className={`${styles['nav-item']} ${
-                                            showSubMenu.includes(
-                                              'teams-' + i
-                                            ) && styles['active']
-                                          } flex flex-col cursor-pointer`}
+                                          className={`${styles['nav-item']} ${showSubMenu.includes(
+                                            'teams-' + i
+                                          ) && styles['active']
+                                            } flex flex-col cursor-pointer`}
                                           key={i}
                                           onClick={
                                             item?.sub
                                               ? () =>
-                                                  handleShowSubMenu(navItem, i)
+                                                handleShowSubMenu(navItem, i)
                                               : () => {
-                                                  push(item?.href);
-                                                  setshowMobileList(false);
-                                                }
+                                                push(item?.href);
+                                                setshowMobileList(false);
+                                              }
                                           }
-                                          // onMouseLeave={handleHideSubMenu}
+                                        // onMouseLeave={handleHideSubMenu}
                                         >
                                           <strong className="flex items-center justify-between font-medium">
                                             {item.title}
@@ -450,11 +439,10 @@ const Header = () => {
                                     </div>
                                     {navItem === 'Teams & Players' && (
                                       <div
-                                        className={`${styles['sub-menu']} ${
-                                          showSubMenu.includes('teams-')
-                                            ? `block`
-                                            : `hidden`
-                                        }`}>
+                                        className={`${styles['sub-menu']} ${showSubMenu.includes('teams-')
+                                          ? `block`
+                                          : `hidden`
+                                          }`}>
                                         <div
                                           onClick={handleHideSubMenu}
                                           className="flex items-center cursor-pointer mb-7">
@@ -493,11 +481,10 @@ const Header = () => {
               </nav>
 
               <div
-                className={`${
-                  !(showSubMenu && showSubMenu.includes('teams-'))
-                    ? `block`
-                    : `hidden`
-                } px-4 pb-10 flex flex-col space-y-4`}>
+                className={`${!(showSubMenu && showSubMenu.includes('teams-'))
+                  ? `block`
+                  : `hidden`
+                  } px-4 pb-10 flex flex-col space-y-4`}>
                 <Button
                   className="px-10"
                   color="failure"
