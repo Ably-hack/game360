@@ -134,7 +134,7 @@ export default class APIService {
     const headers: User = {};
     const loggedInUser = getLoggedInUserFromLocalStorage();
     if (loggedInUser) {
-      headers["Bearer"] = loggedInUser["accessToken"];
+      headers["Authorization"] = `Bearer ${loggedInUser["accessToken"]}`;
     }
     const allHeaders = { ...headers, ...moreHeaders };
     return allHeaders;
