@@ -5,7 +5,7 @@ import HttpSuccessDataHandler from 'src/common/utils/http_success_handler';
 import HttpErrorHandler from 'src/common/utils/http_error_handler';
 
 export default class APIService {
-  static async login(requestBody: object, cb: any) {
+  static async login(requestBody: any, cb: any) {
     axios
       .post(`${Endpoints.LOGIN}`, requestBody)
       .then((response) => {
@@ -57,7 +57,7 @@ export default class APIService {
       })
   }
 
-  static fetchLeagueFixtures(cb: any) {
+  static async fetchLeagueFixtures(cb: any) {
     axios.get(`${Endpoints.FETCH_LEAGUE_FIXTURES}`)
       .then((response) => {
         cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
@@ -67,7 +67,7 @@ export default class APIService {
       })
   }
 
-  static fetchTeamFixtures(cb: any) {
+  static async fetchTeamFixtures(cb: any) {
     axios.get(`${Endpoints.FETCH_TEAM_FIXTURES}`)
       .then((response) => {
         cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
@@ -77,7 +77,7 @@ export default class APIService {
       })
   }
 
-  static fetchFixtureDetails(cb: any) {
+  static async fetchFixtureDetails(cb: any) {
     axios.get(`${Endpoints.FETCH_FIXTURE_DETAILS}`)
       .then((response) => {
         cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
@@ -87,7 +87,7 @@ export default class APIService {
       })
   }
 
-  static fetchLeagueTable(cb: any) {
+  static async fetchLeagueTable(cb: any) {
     axios.get(`${Endpoints.FETCH_LEAGUE_TABLE}`)
       .then((response) => {
         cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
@@ -97,7 +97,7 @@ export default class APIService {
       })
   }
 
-  static fetchHead2HeadStatistics(cb: any) {
+  static async fetchHead2HeadStatistics(cb: any) {
     axios.get(`${Endpoints.FETCH_HEAD2HEAD_STATISTICS}`)
       .then((response) => {
         cb(HttpSuccessDataHandler.getSuccessResponseData(response), null);
