@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import { Image } from '..';
+import { footerData } from 'src/constants/website';
 
 const Footer = () => {
-  const footerItems = [
-    { href: '/careers', item: 'Careers' },
-    { href: '/contact', item: 'Contact' },
-    { href: '/data-policy', item: 'Data Policy' },
-    { href: '/terms', item: 'Terms' },
-    { href: '/privacy', item: 'Privacy' },
-  ];
+  // const footerItems = [
+  //   { href: '/careers', item: 'Careers' },
+  //   { href: '/contact', item: 'Contact' },
+  //   { href: '/data-policy', item: 'Data Policy' },
+  //   { href: '/terms', item: 'Terms' },
+  //   { href: '/privacy', item: 'Privacy' },
+  // ];
   return (
     <div className="2xl:px-8 px-4 pb-5 mt-8 pt-7 border-t bg-white">
       <div className="">
@@ -23,7 +24,7 @@ const Footer = () => {
             />
           </Link>
           <div className="flex items-center justify-between space-x-4">
-            {footerItems.map(({ href, item }, idx) => (
+            {footerData.map(({ href, item }, idx) => (
               <Link
                 key={idx}
                 href={`${href}`}
