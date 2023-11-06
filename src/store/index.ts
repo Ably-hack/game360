@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { apiSlice } from "./slices/apiSlice";
+import userReducer from "./slices/user_slice";
 
 export const store = configureStore({
   reducer: {
+    users: userReducer,
     [apiSlice.reducerPath]: apiSlice.reducer,
   },
   devTools: process.env.NODE_ENV !== "production",
