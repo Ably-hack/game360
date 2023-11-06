@@ -1,10 +1,14 @@
-import Home from 'src/common/components/dashboard/home/Home';
-import DashboardLayout from 'src/common/components/layout/DashboardLayout';
+import Home from 'src/components/dashboard/home/Home';
+import DashboardLayout from 'src/components/layout/DashboardLayout';
+import { ToastContainer } from 'react-toastify';
 
 export default function HomePage() {
   return (
-    <DashboardLayout>
-      <Home />
-    </DashboardLayout>
+    <>
+      <ToastContainer />
+      <DashboardLayout>
+        <Home />
+      </DashboardLayout>
+    </>
   );
 }

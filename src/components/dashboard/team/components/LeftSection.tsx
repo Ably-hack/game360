@@ -1,6 +1,6 @@
 import { Tab } from '@headlessui/react';
 import { FOOTBALL_TEAMS, TeamAndPlayersTabs } from 'src/common/constants';
-import SelectDropDown from '../../../ui/DropDown';
+import SelectDropDown from '../../../../common/DropDown';
 import FixtureList from './FixtureList';
 import ResultList from './ResultList';
 
@@ -58,4 +58,4 @@ function LeftSection() {
 
 export default LeftSection;
 
-export function Example() {}
+export function Example() { }

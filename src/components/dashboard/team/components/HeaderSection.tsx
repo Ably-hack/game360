@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Chart from 'react-google-charts';
-import { CustomButton } from '../../../ui/Buttons/CustomButton';
+import { CustomButton } from '../../../../common/Buttons/CustomButton';
 
 type HeaderSection = {
   teamTitle: string;

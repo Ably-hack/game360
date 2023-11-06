@@ -1,7 +1,7 @@
-import useMediaQuery from "src/common/hooks/useMediaQuery";
-import TeamsTab from "../../shared/Tabs/TeamsTab";
-import { COMPETITION } from "src/common/constants";
+import { COMPETITION } from "src/constants";
+import useMediaQuery from "src/hooks/useMediaQuery";
 import { FootballNews, MatchCardList, TeamsList } from ".";
+import TeamsTab from "../../shared/Tabs/TeamsTab";
 
 const Home = () => {
   const isDesktop = useMediaQuery('(min-width: 768px)');

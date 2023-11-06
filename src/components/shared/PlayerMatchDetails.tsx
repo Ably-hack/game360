@@ -1,4 +1,4 @@
-import { CustomButton } from '../ui/Buttons/CustomButton';
+import { CustomButton } from '../../common/Buttons/CustomButton';
 
 type PlayerMatchDetails = {
   name: string;

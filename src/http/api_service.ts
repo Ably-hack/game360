@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios';
 import Endpoints from './endpoints';
-import HttpSuccessDataHandler from 'src/common/utils/http_success_handler';
-import HttpErrorHandler from 'src/common/utils/http_error_handler';
+import HttpSuccessDataHandler from 'src/utils/http_success_handler';
+import HttpErrorHandler from 'src/utils/http_error_handler';
 
 export default class APIService {
   static async login(requestBody: any, cb: any) {

@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
-import useMediaQuery from 'src/common/hooks/useMediaQuery';
+import useMediaQuery from 'src/hooks/useMediaQuery';
 import { GameDetails } from 'src/types/GameDetails';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -10,7 +10,7 @@ function GameDetails({
   stadium = 'Estádio do Dragão',
   location = 'Porto, Portugal',
 }: GameDetails) {
-  
+
   const isMobile = useMediaQuery('(min-width: 430px)');
 
   return (

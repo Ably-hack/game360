@@ -2,15 +2,15 @@ import Image from 'next/image';
 import React from 'react';
 import { FOOTBALL_TEAMS } from 'src/common/constants';
 import { MdKeyboardArrowUp } from 'react-icons/md';
-import SelectDropDown from '../../../ui/DropDown';
+import SelectDropDown from '../../../../common/DropDown';
 import { applyEvenRowColor } from 'src/common/utils';
 import { TEAM_LEAGUE_TABLE_DATA } from 'src/common/constants/tableData';
 import usePreview from 'src/common/hooks/usePreview';
 
 const TeamLeagueTable = () => {
-   const { open, handleOpen, onKeyUpHandler } = usePreview();
-   const label = open ? 'Table Preview' : 'Table Full View';
-   const data = open ? TEAM_LEAGUE_TABLE_DATA : TEAM_LEAGUE_TABLE_DATA.slice(0, 2);
+  const { open, handleOpen, onKeyUpHandler } = usePreview();
+  const label = open ? 'Table Preview' : 'Table Full View';
+  const data = open ? TEAM_LEAGUE_TABLE_DATA : TEAM_LEAGUE_TABLE_DATA.slice(0, 2);
   return (
     <div className="bg-white py-6 px-5">
       <div className="grid gap-4">
@@ -52,11 +52,10 @@ const TeamLeagueTable = () => {
                 {row.body.map((item, index) => (
                   <tr
                     key={index}
-                    className={` ${
-                      index === 2 && idx === 0
+                    className={` ${index === 2 && idx === 0
                         ? 'bg-primary-light'
                         : applyEvenRowColor(index)
-                    }`}>
+                      }`}>
                     <td className="table-data py-2 px-2 text-left" colSpan={2}>
                       <div className="flex items-center gap-4">
                         <p className="table-data text-md text-neutral-800">

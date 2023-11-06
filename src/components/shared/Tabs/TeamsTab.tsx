@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { DEFAULT_IMAGE } from 'src/common/constants';
+import { DEFAULT_IMAGE } from 'src/constants';
 
 type Tabs = {
   color?: string;

@@ -4,9 +4,9 @@ import {
   DEFAULT_IMAGE,
   DUMMY_DATA,
   FOOTBALL_TEAMS,
-} from 'src/common/constants';
+} from 'src/constants';
 import ClubCard from '../../../shared/Card/ClubCard';
-import SelectDropDown from '../../../ui/DropDown';
+import SelectDropDown from '../../../../common/DropDown';
 
 function TeamsList() {
   return (

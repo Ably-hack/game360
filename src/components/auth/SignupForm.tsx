@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { TextInput } from 'flowbite-react';
 import Image from 'next/image';
-import { HiOutlineEye } from 'react-icons/hi';
 import React, { useState } from 'react';
-import APIService from 'src/http/api_service';
-import { toast } from "react-toastify";
+import { HiOutlineEye } from 'react-icons/hi';
 import { ClipLoader } from 'react-spinners';
+import { toast } from "react-toastify";
+import APIService from 'src/http/api_service';
 
 function SignupForm() {
   const [formData, setFormData] = useState({

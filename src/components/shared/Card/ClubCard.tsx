@@ -1,8 +1,8 @@
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
-import { DEFAULT_IMAGE } from 'src/common/constants';
-import useMediaQuery from 'src/common/hooks/useMediaQuery';
+import { DEFAULT_IMAGE } from 'src/constants';
+import useMediaQuery from 'src/hooks/useMediaQuery';
 import { ClubCard } from 'src/types/ClubCard';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -16,9 +16,8 @@ function ClubCard({
 
   return (
     <div
-      className={`w-full py-2 bg-white ${inter.className} ${
-        showBorderBottom && 'border-b border-grey-50'
-      }`}>
+      className={`w-full py-2 bg-white ${inter.className} ${showBorderBottom && 'border-b border-grey-50'
+        }`}>
       <div className={`flex w-full font-medium `}>
         <div className="py-1">
           <Image

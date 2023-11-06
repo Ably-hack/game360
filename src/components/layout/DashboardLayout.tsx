@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google';
 import { ReactNode } from 'react';
-import { Footer, Header } from '../shared';
 import TodayMatches from '../dashboard/home/components/TodayMatches';
+import { Footer, Header } from '../shared';
 
 const inter = Inter({
   subsets: ['latin'],

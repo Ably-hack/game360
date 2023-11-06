@@ -3,10 +3,10 @@ import {
   DEFAULT_IMAGE,
   DUMMY_DATA,
   FOOTBALL_TEAMS,
-} from 'src/common/constants';
+} from 'src/constants';
 import DateCard from '../../../shared/Card/DateCard';
 import MatchCard from '../../../shared/Card/MatchCard';
-import SelectDropDown from '../../../ui/DropDown';
+import SelectDropDown from '../../../../common/DropDown';
 
 function MatchCardList() {
   return (
