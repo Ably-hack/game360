@@ -57,8 +57,8 @@ export default class APIService {
       })
   }
 
-  static async fetchTeams(cb: any) {
-    axios.get(`${Endpoints.FETCH_TEAM}`, {
+  static async fetchTeam(team_id: string, cb: any) {
+    axios.get(`${Endpoints.FETCH_TEAM.replace(':team_id', team_id)}`, {
       headers: await this.getRequestHeaders()
     })
 
