@@ -9,7 +9,7 @@ class EndPoints {
   static REGISTER = `${this.BASE_URL}/account/register`;
   static FETCH_LEAGUES = `${this.BASE_URL}/livescore/get_leagues`;
   static FETCH_LEAGUE_TEAMS = `${this.BASE_URL}/livescore/teams/:league_id`;
-  static FETCH_TEAM = `${this.BASE_URL}/livescore/team/:team_id`;
+  static FETCH_TEAM = `${this.BASE_URL}/livescore/team/:league_id/:team_id`;
   static FETCH_LEAGUE_FIXTURES = `${this.BASE_URL}/livescore/fixtures/:league_id`;
   static FETCH_TEAM_FIXTURES = `${this.BASE_URL}/livescore/fixtures`;
   static FETCH_FIXTURE_DETAILS = `${this.BASE_URL}/livescore/fixture/:match_id`;
