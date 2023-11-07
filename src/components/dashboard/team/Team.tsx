@@ -4,8 +4,9 @@ import TeamLeagueTable from './components/TeamLeagueTable';
 import TeamPerformance from './components/TeamPerformance';
 import TeamSquad from './components/TeamSquad';
 import ViewTransfers from './components/transfer/ViewTransfers';
+import { TeamDetails } from 'src/types/League';
 
-const Team = () => {
+const Team = ({ detail }: { detail: TeamDetails }) => {
   return (
     <div className="grid grid-cols-12 gap-1">
       <div className="col-span-full md:col-span-5 lg:col-span-4 xl:col-span-3 mt-1">
@@ -22,7 +23,7 @@ const Team = () => {
       <div className="col-span-full lg:col-span-3 mt-1">
         {/* Right section */}
         <TeamSquad />
-        <FanClubNews/>
+        <FanClubNews />
       </div>
     </div>
   );

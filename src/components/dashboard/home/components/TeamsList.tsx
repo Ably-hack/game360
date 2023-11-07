@@ -1,11 +1,15 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import {
   DEFAULT_IMAGE
 } from 'src/constants';
 import APIService from 'src/http/api_service';
+import { setLeagueId, setTeamId } from 'src/store/slices/league_slice';
 import { Team } from 'src/types/League';
 import ClubCard from '../../../shared/Card/ClubCard';
 interface Props {
@@ -13,6 +17,8 @@ interface Props {
 }
 
 const TeamsList = ({ leagueList }: Props) => {
+  const dispatch = useDispatch();
+
   const [team, setTeam] = useState<Team[]>([]);
   const [value, setValue] = useState<string>('');
 
@@ -52,7 +58,9 @@ const TeamsList = ({ leagueList }: Props) => {
         `}
           value={value}
           onChange={(e) => {
-            setValue(e.target.value);
+            const league = e.target.value;
+            setValue(league);
+            dispatch(setLeagueId(league));
           }}
         >
           {leagueList &&
@@ -73,7 +81,11 @@ const TeamsList = ({ leagueList }: Props) => {
             team.map((item) => {
               return (
                 <Link href={`/team`} passHref key={item.id}>
-                  <div className="px-6 py-2">
+                  <div
+                    className="px-6 py-2"
+                    onClick={() => {
+                      dispatch(setTeamId(item.id))
+                    }}>
                     <ClubCard
                       showBorderBottom={true}
                       clubTitle={item.name}

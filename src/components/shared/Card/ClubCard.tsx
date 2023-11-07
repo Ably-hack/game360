@@ -29,7 +29,7 @@ function ClubCard({
           />
         </div>
         <div>
-          <h3 className=" text-neutral-600 text-lg">Chelsea</h3>
+          <h3 className=" text-neutral-600 text-lg">{clubTitle}</h3>
         </div>
       </div>
       <div className="py-1 text-sm text-grey-100">

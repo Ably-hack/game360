@@ -3,11 +3,13 @@ import Chart from 'react-google-charts';
 import { CustomButton } from '../../../../common/Buttons/CustomButton';
 
 type HeaderSection = {
-  teamTitle: string;
-  location: string;
+  teamTitle?: string | null;
+  location?: string | null;
   averageAge: number;
-  totalPlayers: number;
+  totalPlayers?: string | null;
   foreignPlayers: number;
+  logo?: string | null,
+  yearFounded?: string | null,
 };
 
 function HeaderSection({
@@ -15,25 +17,26 @@ function HeaderSection({
   location,
   averageAge,
   totalPlayers,
-  foreignPlayers,
+  logo,
+  yearFounded
 }: HeaderSection) {
-  const pieChartOneData = [
-    ['Title', 'Number of Player'],
-    ['foreign players', foreignPlayers],
-    ['national players', totalPlayers - foreignPlayers],
-  ];
+  // const pieChartOneData = [
+  //   ['Title', 'Number of Player'],
+  //   ['foreign players', foreignPlayers],
+  //   ['national players', totalPlayers - foreignPlayers],
+  // ];
 
-  const pieChartOTwoData = [
-    ['Title', 'Number of Player'],
-    ['national players', totalPlayers - foreignPlayers],
-    ['foreign players', foreignPlayers],
-  ];
+  // const pieChartOTwoData = [
+  //   ['Title', 'Number of Player'],
+  //   ['national players', totalPlayers - foreignPlayers],
+  //   ['foreign players', foreignPlayers],
+  // ];
 
-  const options = {
-    colors: ['#DD0000', '#F7EBEB'],
-    legend: { position: 'none' },
-    backgroundColor: '#F7F7F7',
-  };
+  // const options = {
+  //   colors: ['#DD0000', '#F7EBEB'],
+  //   legend: { position: 'none' },
+  //   backgroundColor: '#F7F7F7',
+  // };
 
   // #EDEDED
 
@@ -46,7 +49,7 @@ function HeaderSection({
             <div className="mr-6">
               <Image
                 className="mr-2"
-                src="/images/chelsea.png"
+                src={logo}
                 height={147}
                 width={147}
                 alt="team logo"
@@ -67,7 +70,7 @@ function HeaderSection({
                   />
                   <p> {location} </p>
                 </div>
-                <p className="mt-1 text-xs ">Founded in 10 Mar 1904</p>
+                <p className="mt-1 text-xs ">Founded in {yearFounded}</p>
                 <CustomButton
                   text="Follow"
                   rounded={false}
@@ -84,7 +87,7 @@ function HeaderSection({
                 <p className="text-grey-250"> Average Age </p>
               </div>
 
-              <div className="py-3 px-2 mr-1 text-left flex  bg-grey-50">
+              {/* <div className="py-3 px-2 mr-1 text-left flex  bg-grey-50">
                 <Chart
                   chartType="PieChart"
                   data={pieChartOneData}
@@ -97,7 +100,7 @@ function HeaderSection({
                   <p className="text-lg font-bold"> {foreignPlayers} </p>
                   <p className="text-grey-250"> Foreign Players </p>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="">
               <div className="py-3 px-2 text-left">
@@ -105,7 +108,7 @@ function HeaderSection({
                 <p className="text-grey-250"> Total Players </p>
               </div>
 
-              <div className="py-3 px-2 text-left flex bg-grey-50">
+              {/* <div className="py-3 px-2 text-left flex bg-grey-50">
                 <Chart
                   chartType="PieChart"
                   data={pieChartOTwoData}
@@ -119,7 +122,7 @@ function HeaderSection({
                   </p>
                   <p className="text-grey-250"> National Players </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
