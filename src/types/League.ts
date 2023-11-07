@@ -6,4 +6,20 @@ interface Team {
     founded?: string | null
 }
 
-export type { Team };
+interface TeamDetails {
+    players: [],
+    total_players?: string | null,
+    info: {
+        name: string | null,
+        founded: string | null,
+        logo: string | null,
+        country: string | null
+    },
+    venue: {
+        stadium: string | null,
+        city?: string | null,
+        capacity?: string | null
+    }
+}
+
+export type { Team, TeamDetails };
