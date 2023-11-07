@@ -12,7 +12,7 @@ interface TeamDetails {
     info: {
         name: string | null,
         founded: string | null,
-        logo: string | null,
+        logo: string,
         country: string | null
     },
     venue: {

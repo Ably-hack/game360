@@ -4,10 +4,12 @@ import { RootState } from "..";
 const initialState = {
     team_id: "",
     league_id: "",
+    leagues: [],
+    table_league_id: ""
 };
 
 export const leagueSlice = createSlice({
-    name: "users",
+    name: "league",
     initialState,
     reducers: {
         setTeamId: (state, action) => {
@@ -15,16 +17,26 @@ export const leagueSlice = createSlice({
         },
         setLeagueId: (state, action) => {
             state.league_id = action.payload;
+        },
+        setLeagueData: (state, action) => {
+            state.leagues = action.payload;
+        },
+        setTableLeagueId: (state, action) => {
+            state.table_league_id = action.payload;
         }
     },
 });
 
 export const getTeamId = (state: RootState) => state.league.team_id;
 export const getLeagueId = (state: RootState) => state.league.league_id;
+export const getLeagueData = (state: RootState) => state.league.leagues;
+export const getTableLeagueId = (state: RootState) => state.league.table_league_id;
 
 export const {
     setTeamId,
-    setLeagueId
+    setLeagueId,
+    setLeagueData,
+    setTableLeagueId
 } = leagueSlice.actions;
 
 export default leagueSlice.reducer;
