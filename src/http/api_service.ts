@@ -106,8 +106,8 @@ export default class APIService {
       })
   }
 
-  static async fetchLeagueTable(cb: any) {
-    axios.get(`${Endpoints.FETCH_LEAGUE_TABLE}`, {
+  static async fetchLeagueTable(league_id: string, cb: any) {
+    axios.get(`${Endpoints.FETCH_LEAGUE_TABLE.replace(':league_id', league_id)}`, {
       headers: await this.getRequestHeaders()
     })
       .then((response) => {
