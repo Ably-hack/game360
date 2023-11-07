@@ -2,10 +2,12 @@ import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { apiSlice } from "./slices/apiSlice";
 import userReducer from "./slices/user_slice";
+import leagueReducer from "./slices/league_slice";
 
 export const store = configureStore({
   reducer: {
     users: userReducer,
+    league: leagueReducer,
     [apiSlice.reducerPath]: apiSlice.reducer,
   },
   devTools: process.env.NODE_ENV !== "production",
