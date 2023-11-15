@@ -374,6 +374,91 @@ const ARSENAL_LAST_GAME_RECORD_DATA = {
     },
   ],
 };
+
+const TOTAL_GOALS = {
+  title: 'Total Goals',
+  statistics: [
+    {
+      id: 1,
+      points: 5,
+      name: 'chelsea',
+      logo: '/images/chelsea.png',
+      color: '#144992',
+      percentage: '50%',
+    },
+    {
+      id: 3,
+      points: 8,
+      name: 'arsenal',
+      logo: '/images/arsenal.png',
+      color: '#D00',
+      percentage: '70%',
+    },
+  ],
+};
+const GOAL_DEFFERENCE = {
+  title: 'Goal Difference',
+  statistics: [
+    {
+      id: 1,
+      points: 2,
+      name: 'chelsea',
+      logo: '/images/chelsea.png',
+      color: '#144992',
+      percentage: '50%',
+    },
+    {
+      id: 3,
+      points: 13,
+      name: 'arsenal',
+      logo: '/images/arsenal.png',
+      color: '#D00',
+      percentage: '80%',
+    },
+  ],
+};
+const ASSISTS = {
+  title: 'Assists',
+  statistics: [
+    {
+      id: 1,
+      points: 3,
+      name: 'chelsea',
+      logo: '/images/chelsea.png',
+      color: '#144992',
+      percentage: '40%',
+    },
+    {
+      id: 3,
+      points: 6,
+      name: 'arsenal',
+      logo: '/images/arsenal.png',
+      color: '#D00',
+      percentage: '70%',
+    },
+  ],
+};
+const GOALS_AGAINST = {
+  title: 'Goals Against',
+  statistics: [
+    {
+      id: 1,
+      points: 5,
+      name: 'chelsea',
+      logo: '/images/chelsea.png',
+      color: '#144992',
+      percentage: '50%',
+    },
+    {
+      id: 3,
+      points: 13,
+      name: 'arsenal',
+      logo: '/images/arsenal.png',
+      color: '#D00',
+      percentage: '80%',
+    },
+  ],
+};
 export {
   ARSENAL_PlAYERS,
   CHELSEA_PlAYERS,
@@ -389,4 +474,8 @@ export {
   HEAD_TO_HEAD_RECORD_DATA,
   CHELSEA_LAST_GAME_RECORD_DATA,
   ARSENAL_LAST_GAME_RECORD_DATA,
+  TOTAL_GOALS,
+  GOAL_DEFFERENCE,
+  ASSISTS,
+  GOALS_AGAINST,
 };
